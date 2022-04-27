@@ -32,6 +32,9 @@
     flex-direction: column;
     justify-items: center;
   }
+  #placeholder h1 {
+    font-size: 2em;
+  }
 }
 #grid-container {
   display: grid;
