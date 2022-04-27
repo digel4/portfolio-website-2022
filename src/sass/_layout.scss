@@ -66,67 +66,67 @@
 }
 
 
-@media only screen and (max-width: 600px) {
-    #grid-container {
-        display: grid;
-        grid-template-columns: 5% 90% 5%;
-        grid-template-rows: 10vh 90vh 100vh 100vh 100vh 80vh 10vh 10vh;
-    }
+// @media only screen and (max-width: 600px) {
+//     #grid-container {
+//         display: grid;
+//         grid-template-columns: 5% 90% 5%;
+//         grid-template-rows: 10vh 90vh 100vh 100vh 100vh 80vh 10vh 10vh;
+//     }
 
-    #header {
-        grid-column: 1/ span 3;
-        grid-row: 1 / span 1;
+//     #header {
+//         grid-column: 1/ span 3;
+//         grid-row: 1 / span 1;
     
-        // height: 20vh;
-    }
+//         // height: 20vh;
+//     }
     
-    #hero {
-        grid-column: 2/ span 1;
-        grid-row: 2 / span 1;
+//     #hero {
+//         grid-column: 2/ span 1;
+//         grid-row: 2 / span 1;
     
-        // height: 80vh;
-    }
-    
-    
-    #about {
-        grid-column: 2/ span 1;
-        grid-row: 3 / span 1;
-    
-        //height: 100vh;
-    }
+//         // height: 80vh;
+//     }
     
     
-    #experience {
-        grid-column: 2/ span 1;
-        grid-row: 4 / span 1;
+//     #about {
+//         grid-column: 2/ span 1;
+//         grid-row: 3 / span 1;
     
-        //height: 100vh;
-    }
+//         //height: 100vh;
+//     }
     
-    #portfolio {
-        grid-column: 2/ span 1;
-        grid-row: 5 / span 1;
     
-        //height: 100vh;
-    }
+//     #experience {
+//         grid-column: 2/ span 1;
+//         grid-row: 4 / span 1;
     
-    #contact {
-        grid-column: 2/ span 1;
-        grid-row: 6 / span 1;
+//         //height: 100vh;
+//     }
     
-        //height: 80vh;
-    }
+//     #portfolio {
+//         grid-column: 2/ span 1;
+//         grid-row: 5 / span 1;
+    
+//         //height: 100vh;
+//     }
+    
+//     #contact {
+//         grid-column: 2/ span 1;
+//         grid-row: 6 / span 1;
+    
+//         //height: 80vh;
+//     }
     
 
     
-    #aside {
-        grid-column: 2/ span 1;
-        grid-row: 7 / span 1;
-    }
+//     #aside {
+//         grid-column: 2/ span 1;
+//         grid-row: 7 / span 1;
+//     }
 
-    #footer {
-        grid-column: 2/ span 1;
-        grid-row: 8 / span 1;
-    }
-}
+//     #footer {
+//         grid-column: 2/ span 1;
+//         grid-row: 8 / span 1;
+//     }
+// }
 
