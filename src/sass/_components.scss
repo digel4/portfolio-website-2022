@@ -1,41 +1,69 @@
-#header {
-    background-color: orangered;
-    width: 100%;
+// #header {
+//     background-color: orangered;
+//     width: 100%;
+// }
+
+// #hero {
+//     background-color: orchid;
+
+// }
+
+
+// #about {
+//     background-color: blueviolet;
+
+// }
+
+
+// #experience {
+//     background-color: burlywood;
+
+// }
+
+// #portfolio {
+//     background-color: bisque;
+
+// }
+
+// #contact {
+//     background-color: greenyellow;
+
+// }
+
+// #footer {
+//     background-color: goldenrod;
+
+// }
+
+// #aside {
+//     background-color: purple;
+
+// }
+
+#placeholder {
+    h1 {
+        opacity: 0;
+        font-weight: lighter;
+        font-family: helvetica;
+        display: inline;
+        font-size: 3em;
+        animation: fadein 2s forwards;
+        animation-delay: 1s;
+    }
+    img {
+        opacity: 0;
+        height: 3em;
+        width: 3em;
+        animation: fadein 2s forwards;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
 }
 
-#hero {
-    background-color: orchid;
-
-}
-
-
-#about {
-    background-color: blueviolet;
-
-}
-
-
-#experience {
-    background-color: burlywood;
-
-}
-
-#portfolio {
-    background-color: bisque;
-
-}
-
-#contact {
-    background-color: greenyellow;
-
-}
-
-#footer {
-    background-color: goldenrod;
-
-}
-
-#aside {
-    background-color: purple;
-
+@keyframes fadein {
+    from { opacity: 0;}
+    to { opacity: 1 }
 }

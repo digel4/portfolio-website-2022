@@ -1,80 +1,41 @@
-#header {
-  background-color: orangered;
-  width: 100%;
+#placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#placeholder h1 {
+  opacity: 0;
+  font-weight: lighter;
+  font-family: helvetica;
+  display: inline;
+  font-size: 3em;
+  animation: fadein 2s forwards;
+  animation-delay: 1s;
+}
+#placeholder img {
+  opacity: 0;
+  height: 3em;
+  width: 3em;
+  animation: fadein 2s forwards;
 }
 
-#hero {
-  background-color: orchid;
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-
-#about {
-  background-color: blueviolet;
-}
-
-#experience {
-  background-color: burlywood;
-}
-
-#portfolio {
-  background-color: bisque;
-}
-
-#contact {
-  background-color: greenyellow;
-}
-
-#footer {
-  background-color: goldenrod;
-}
-
-#aside {
-  background-color: purple;
-}
-
 #grid-container {
   display: grid;
-  grid-template-columns: 5% 90% 5%;
-  grid-template-rows: 10vh 90vh 100vh 100vh 100vh 90vh 10vh;
+  grid-template-columns: 100%;
+  grid-template-rows: 100vh;
 }
 
-#header {
-  grid-column: 1/span 3;
-  grid-row: 1/span 1;
-}
-
-#hero {
-  grid-column: 2/span 1;
-  grid-row: 2/span 1;
-}
-
-#about {
-  grid-column: 2/span 1;
-  grid-row: 3/span 1;
-}
-
-#experience {
-  grid-column: 2/span 1;
-  grid-row: 4/span 1;
-}
-
-#portfolio {
-  grid-column: 2/span 1;
-  grid-row: 5/span 1;
-}
-
-#contact {
-  grid-column: 2/span 1;
-  grid-row: 6/span 1;
-}
-
-#footer {
-  grid-column: 2/span 1;
-  grid-row: 7/span 1;
-}
-
-#aside {
+#placeholder {
   grid-column: 1/span 1;
-  grid-row: 2/span 7;
+  grid-row: 1/span 1;
 }
 
 @media only screen and (max-width: 600px) {
