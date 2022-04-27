@@ -67,3 +67,10 @@
     from { opacity: 0;}
     to { opacity: 1 }
 }
+
+@media only screen and (max-width: 600px) {
+    #placeholder {
+        flex-direction: column;
+        justify-items: center;
+    }
+}

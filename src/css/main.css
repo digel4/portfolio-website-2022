@@ -27,6 +27,12 @@
     opacity: 1;
   }
 }
+@media only screen and (max-width: 600px) {
+  #placeholder {
+    flex-direction: column;
+    justify-items: center;
+  }
+}
 #grid-container {
   display: grid;
   grid-template-columns: 100%;
@@ -36,6 +42,19 @@
 #placeholder {
   grid-column: 1/span 1;
   grid-row: 1/span 1;
+}
+
+@media only screen and (max-width: 600px) {
+  #grid-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100vh;
+  }
+
+  #placeholder {
+    grid-column: 1/span 1;
+    grid-row: 1/span 1;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

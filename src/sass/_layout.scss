@@ -66,12 +66,18 @@
 }
 
 
-// @media only screen and (max-width: 600px) {
-//     #grid-container {
-//         display: grid;
-//         grid-template-columns: 5% 90% 5%;
-//         grid-template-rows: 10vh 90vh 100vh 100vh 100vh 80vh 10vh 10vh;
-//     }
+@media only screen and (max-width: 600px) {
+    #grid-container {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 100vh;
+    }
+
+    #placeholder {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+    }
+}
 
 //     #header {
 //         grid-column: 1/ span 3;
@@ -129,4 +135,3 @@
 //         grid-row: 8 / span 1;
 //     }
 // }
-
