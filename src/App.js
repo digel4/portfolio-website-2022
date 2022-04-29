@@ -12,17 +12,17 @@ import Placeholder from './components/Placeholder'
 
 function App() {
   return (
-  <div id="grid-container">
-    <Placeholder />
-      {/* <Header />
+    <div id="grid-container">
+      {/* <Placeholder /> */}
+      <Header />
       <Hero />
       <About />
       <Experience />
       <Portfolio />
       <Contact />
       <Footer />
-      <Aside /> */}
-  </div>
+      <Aside />
+    </div>
   );
 }
 

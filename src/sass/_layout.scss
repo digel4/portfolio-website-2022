@@ -1,137 +1,141 @@
 #grid-container {
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 100vh;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 10vh 90vh 100vh 100vh 100vh 90vh 10vh;
 }
 
-// #header {
-//     grid-column: 1/ span 3;
-//     grid-row: 1 / span 1;
-
-//     // height: 20vh;
-// }
-
-// #hero {
-//     grid-column: 2/ span 1;
-//     grid-row: 2 / span 1;
-
-//     // height: 80vh;
-// }
-
-
-// #about {
-//     grid-column: 2/ span 1;
-//     grid-row: 3 / span 1;
-
-//     //height: 100vh;
-// }
-
-
-// #experience {
-//     grid-column: 2/ span 1;
-//     grid-row: 4 / span 1;
-
-//     //height: 100vh;
-// }
-
-// #portfolio {
-//     grid-column: 2/ span 1;
-//     grid-row: 5 / span 1;
-
-//     //height: 100vh;
-// }
-
-// #contact {
-//     grid-column: 2/ span 1;
-//     grid-row: 6 / span 1;
-
-//     //height: 80vh;
-// }
-
-// #footer {
-//     grid-column: 2/ span 1;
-//     grid-row: 7 / span 1;
-
-//     //height: 20vh;
-// }
-
-// #aside {
-//     grid-column: 1/ span 1;
-//     grid-row: 2 / span 7;
-// }
-
-#placeholder {
-    grid-column: 1 / span 1;
+#header {
+    grid-column: 1/ span 3;
     grid-row: 1 / span 1;
+
+    // height: 20vh;
 }
+
+#hero {
+    grid-column: 2/ span 1;
+    grid-row: 2 / span 1;
+
+    // height: 80vh;
+}
+
+
+#about {
+    grid-column: 2/ span 1;
+    grid-row: 3 / span 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    //height: 100vh;
+}
+
+
+#experience {
+    grid-column: 2/ span 1;
+    grid-row: 4 / span 1;
+
+
+    //height: 100vh;
+}
+
+#portfolio {
+    grid-column: 2/ span 1;
+    grid-row: 5 / span 1;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 10% auto;
+    h1 {
+        grid-column: 1/ span 2;
+        grid-row: 1/ span 1;
+    }
+    div ul {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+
+    //height: 100vh;
+}
+
+#contact {
+    grid-column: 2/ span 1;
+    grid-row: 6 / span 1;
+
+    //height: 80vh;
+}
+
+#footer {
+    grid-column: 2/ span 1;
+    grid-row: 7 / span 1;
+
+    //height: 20vh;
+}
+
+#aside {
+    grid-column: 1/ span 1;
+    grid-row: 2 / span 7;
+}
+
 
 
 @media only screen and (max-width: 600px) {
     #grid-container {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 100vh;
+        grid-template-rows: 10vh 90vh 100vh 100vh 100vh 80vh 10vh 10vh;
     }
 
-    #placeholder {
-        grid-column: 1 / span 1;
+    #header {
+        grid-column: 1/ span 3;
         grid-row: 1 / span 1;
+    
+        // height: 20vh;
+    }
+    
+    #hero {
+        grid-column: 2/ span 1;
+        grid-row: 2 / span 1;
+    
+        // height: 80vh;
+    }
+    
+    
+    #about {
+        grid-column: 2/ span 1;
+        grid-row: 3 / span 1;
+    
+        //height: 100vh;
+    }
+    
+    
+    #experience {
+        grid-column: 2/ span 1;
+        grid-row: 4 / span 1;
+    
+        //height: 100vh;
+    }
+    
+    #portfolio {
+        grid-column: 2/ span 1;
+        grid-row: 5 / span 1;
+    
+        //height: 100vh;
+    }
+    
+    #contact {
+        grid-column: 2/ span 1;
+        grid-row: 6 / span 1;
+    
+        //height: 80vh;
+    }
+    
+
+    
+    #aside {
+        grid-column: 2/ span 1;
+        grid-row: 7 / span 1;
+    }
+
+    #footer {
+        grid-column: 2/ span 1;
+        grid-row: 8 / span 1;
     }
 }
-
-//     #header {
-//         grid-column: 1/ span 3;
-//         grid-row: 1 / span 1;
-    
-//         // height: 20vh;
-//     }
-    
-//     #hero {
-//         grid-column: 2/ span 1;
-//         grid-row: 2 / span 1;
-    
-//         // height: 80vh;
-//     }
-    
-    
-//     #about {
-//         grid-column: 2/ span 1;
-//         grid-row: 3 / span 1;
-    
-//         //height: 100vh;
-//     }
-    
-    
-//     #experience {
-//         grid-column: 2/ span 1;
-//         grid-row: 4 / span 1;
-    
-//         //height: 100vh;
-//     }
-    
-//     #portfolio {
-//         grid-column: 2/ span 1;
-//         grid-row: 5 / span 1;
-    
-//         //height: 100vh;
-//     }
-    
-//     #contact {
-//         grid-column: 2/ span 1;
-//         grid-row: 6 / span 1;
-    
-//         //height: 80vh;
-//     }
-    
-
-    
-//     #aside {
-//         grid-column: 2/ span 1;
-//         grid-row: 7 / span 1;
-//     }
-
-//     #footer {
-//         grid-column: 2/ span 1;
-//         grid-row: 8 / span 1;
-//     }
-// }

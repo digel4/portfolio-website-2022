@@ -1,62 +1,319 @@
-#placeholder {
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+li {
+  color: #b9b9b9;
+  list-style-type: none;
+  font-size: 100%;
+}
+
+p {
+  color: #b9b9b9;
+  font-size: 100%;
+}
+
+html {
+  background-color: #474747;
+  font-size: 100%;
+}
+
+.img-overlay {
+  background-color: #eb175d;
+  height: inherit;
+  width: inherit;
+  transition: all 1s;
+  opacity: 0.5;
+}
+
+.img-overlay:hover {
+  background-color: transparent;
+}
+
+#header {
+  color: #eb175d;
+  width: 100%;
   display: flex;
+  justify-content: space-between;
+}
+#header svg {
+  fill: #eb175d;
+}
+#header svg:hover path {
+  fill: white;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+}
+nav ul {
+  display: inline;
+}
+nav li {
+  display: inline;
+}
+nav li a {
+  margin: 1em;
+  color: #eb175d;
+  transition: all 0.25s;
+}
+nav li a:hover {
+  color: white;
+}
+
+.icon {
+  fill: #eb175d;
+  height: 20px;
+  width: 20px;
+}
+
+#hero {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+}
+#hero h1 {
+  color: #e2e2e2;
+  font-size: 200%;
+}
+#hero h3 {
+  color: #eb175d;
+  font-size: 150%;
+}
+
+#about h1 {
+  color: white;
+}
+#about li {
+  color: 100%;
+}
+#about div {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+}
+#about #head-shot {
+  background-image: url("../hide-pain-harold.jpg");
+  height: 200px;
+  width: 200px;
+  background-position: center;
+  background-color: #cccccc;
+  /* Used if the image is unavailable */
+  background-position: center;
+  /* Center the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
+  filter: grayscale(0.25);
+}
+
+#portfolio h1 {
+  color: #e2e2e2;
+  font-size: 200%;
+}
+#portfolio div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+#portfolio div h2 {
+  font-size: 150%;
+  color: #e2e2e2;
+}
+#portfolio div h3 {
+  font-size: 100%;
+  color: #eb175d;
+}
+#portfolio p {
+  background-color: #2c2c2c;
+  position: relative;
+  width: 110%;
+}
+#portfolio .portfolio-outside-links {
+  flex-direction: row;
+}
+#portfolio .portfolio-website-img {
+  background-image: url("../rcf-homepage.png");
+  background-size: cover;
+  height: 400px;
+  width: 600px;
+  filter: grayscale(0.25);
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-#placeholder h1 {
-  opacity: 0;
-  font-weight: lighter;
-  font-family: helvetica;
-  display: inline;
-  font-size: 3em;
-  animation: fadein 2s forwards;
-  animation-delay: 1s;
+#contact h1 {
+  color: white;
 }
-#placeholder img {
-  opacity: 0;
-  height: 3em;
-  width: 3em;
-  animation: fadein 2s forwards;
+#contact p {
+  width: 60%;
+  text-align: center;
+}
+#contact svg {
+  border: 2px solid #eb175d;
+  border-radius: 100%;
+  padding: 20px;
+  margin: 20px;
+}
+#contact svg:hover {
+  border-color: white;
+}
+#contact svg:hover path {
+  fill: white;
 }
 
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+#footer {
+  display: flex;
+  justify-content: center;
 }
-@media only screen and (max-width: 600px) {
-  #placeholder {
-    flex-direction: column;
-    justify-items: center;
-  }
-  #placeholder h1 {
-    font-size: 2em;
-  }
+
+#aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
+#aside ul {
+  margin: 1em;
+  padding: 0;
+}
+#aside ul li {
+  margin: 1em;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4em;
+  width: 12em;
+  background-color: transparent;
+  color: #eb175d;
+  border: 2px solid #eb175d;
+  border-radius: 0.5em;
+  transition: all 0.5s;
+}
+
+.button:hover {
+  background-color: #eb175d;
+  color: white;
+}
+
 #grid-container {
   display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 100vh;
+  grid-template-columns: 15% 70% 15%;
+  grid-template-rows: 10vh 90vh 100vh 100vh 100vh 90vh 10vh;
 }
 
-#placeholder {
-  grid-column: 1/span 1;
+#header {
+  grid-column: 1/span 3;
   grid-row: 1/span 1;
+}
+
+#hero {
+  grid-column: 2/span 1;
+  grid-row: 2/span 1;
+}
+
+#about {
+  grid-column: 2/span 1;
+  grid-row: 3/span 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#experience {
+  grid-column: 2/span 1;
+  grid-row: 4/span 1;
+}
+
+#portfolio {
+  grid-column: 2/span 1;
+  grid-row: 5/span 1;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 10% auto;
+}
+#portfolio h1 {
+  grid-column: 1/span 2;
+  grid-row: 1/span 1;
+}
+#portfolio div ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#contact {
+  grid-column: 2/span 1;
+  grid-row: 6/span 1;
+}
+
+#footer {
+  grid-column: 2/span 1;
+  grid-row: 7/span 1;
+}
+
+#aside {
+  grid-column: 1/span 1;
+  grid-row: 2/span 7;
 }
 
 @media only screen and (max-width: 600px) {
   #grid-container {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 100vh;
+    grid-template-rows: 10vh 90vh 100vh 100vh 100vh 80vh 10vh 10vh;
   }
 
-  #placeholder {
-    grid-column: 1/span 1;
+  #header {
+    grid-column: 1/span 3;
     grid-row: 1/span 1;
+  }
+
+  #hero {
+    grid-column: 2/span 1;
+    grid-row: 2/span 1;
+  }
+
+  #about {
+    grid-column: 2/span 1;
+    grid-row: 3/span 1;
+  }
+
+  #experience {
+    grid-column: 2/span 1;
+    grid-row: 4/span 1;
+  }
+
+  #portfolio {
+    grid-column: 2/span 1;
+    grid-row: 5/span 1;
+  }
+
+  #contact {
+    grid-column: 2/span 1;
+    grid-row: 6/span 1;
+  }
+
+  #aside {
+    grid-column: 2/span 1;
+    grid-row: 7/span 1;
+  }
+
+  #footer {
+    grid-column: 2/span 1;
+    grid-row: 8/span 1;
   }
 }
 
