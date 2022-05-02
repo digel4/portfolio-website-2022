@@ -1,7 +1,7 @@
 #grid-container {
     display: grid;
     grid-template-columns: 15% 70% 15%;
-    grid-template-rows: 10vh 90vh 100vh 100vh 100vh 90vh 10vh;
+    grid-template-rows: 10vh 90vh auto auto auto auto auto;
 }
 
 #header {
@@ -24,16 +24,30 @@
     grid-row: 3 / span 1;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    //height: 100vh;
 }
-
+form {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    #contact-details {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 3;
+    }
+    #message {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 3;
+    }
+    #submit {
+        grid-column: 1 / span 2;
+        grid-row: 4 / span 1;
+    }
+}
 
 #experience {
     grid-column: 2/ span 1;
     grid-row: 4 / span 1;
-
-
-    //height: 100vh;
 }
 
 #portfolio {
@@ -80,11 +94,12 @@
 
 @media only screen and (max-width: 600px) {
     #grid-container {
-        grid-template-rows: 10vh 90vh 100vh 100vh 100vh 80vh 10vh 10vh;
+        grid-template-columns: 5% 90% 5%;
+        //grid-template-rows: 10vh 90vh 100vh 100vh 100vh 80vh 10vh 10vh;
     }
 
     #header {
-        grid-column: 1/ span 3;
+        //grid-column: 2/ span 1;
         grid-row: 1 / span 1;
     
         // height: 20vh;
@@ -101,6 +116,7 @@
     #about {
         grid-column: 2/ span 1;
         grid-row: 3 / span 1;
+        grid-template-columns: 1fr;
     
         //height: 100vh;
     }
@@ -116,6 +132,8 @@
     #portfolio {
         grid-column: 2/ span 1;
         grid-row: 5 / span 1;
+        display: flex;
+        flex-direction: column;
     
         //height: 100vh;
     }
