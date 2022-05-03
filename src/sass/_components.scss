@@ -101,7 +101,7 @@ nav {
     animation: splash-screen-svg-fade-in 0.5s forwards 1s;
 
     h1 {
-        font-family: JetBrainsMono;
+        // font-family: JetBrainsMono;
         color: var.$big-text-color;
         font-size: var.$large-text;
     }
@@ -109,7 +109,7 @@ nav {
         
         color: var.$secondary-color;
         font-size: var.$medium-text;
-        font-family: IBMPlexSans-Regular;
+        // font-family: IBMPlexSans-Regular;
     }
     #hero-buttons {
         display: flex;
@@ -144,6 +144,7 @@ nav {
         background-image: url("../hide-pain-harold.jpg");
         height: 200px;
         width: 200px;
+        border-radius: 0.25rem;
         background-position: center;
         background-color: #cccccc; /* Used if the image is unavailable */
         background-position: center; /* Center the image */
@@ -171,8 +172,14 @@ nav {
             color: var.$secondary-color;
         }
     }
+    ul {
+        padding: 0;
+    }
     li {
         color: var.$small-text-color;
+        list-style-type: disc;
+        margin: 1rem;
+
     }
     margin-bottom: 20vh;
 }
@@ -206,6 +213,10 @@ nav {
         position: relative;
         width: 110%
     }
+
+    .featured-project {
+        color: var.$secondary-color;
+    }
     .portfolio-outside-links{
         flex-direction: row;
     }
@@ -215,7 +226,17 @@ nav {
         height: 400px;
         width: 600px;
         margin: 1rem;
-        filter: grayscale(0.25)
+        filter: grayscale(0.25);
+        border-radius: 0.25rem;
+    }
+    .portfolio-outside-links {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        //align-items: center;
+        a {
+            margin: 1rem;
+        }
     }
     margin-bottom: 20vh;
 }
@@ -355,18 +376,18 @@ nav {
     }
     input[type="submit"] {
 
-        height: 40%;
-        width: 50%;
-        background: none;
-        border: 2px solid var.$secondary-color;;
-        border-radius: 20px;
-        color: var.$secondary-color;
-        font-size: var.$small-text;
-        transition: all 0.2s;
+        // height: 40%;
+        // width: 50%;
+        // background: none;
+        // border: 2px solid var.$secondary-color;;
+        // border-radius: 20px;
+        // color: var.$secondary-color;
+        // font-size: var.$small-text;
+        // transition: all 0.2s;
     }
     input[type="submit"]:hover {
-        background-color: var.$secondary-color;
-        color: white;
+        // background-color: var.$secondary-color;
+        // color: white;
     }
     margin-bottom: 20vh;
 }
@@ -511,9 +532,9 @@ form {
         left: 0;
         height: 100vh;
         width: 100%;
-        display: flex;
+        display: none;
         //background-color: bisque;
-        animation: hamburger-appear 0.5s forwards;
+        //animation: hamburger-appear 0.5s forwards;
     }
     #ham-items {
         // overflow: hidden;
@@ -585,6 +606,8 @@ form {
     }
 
     #portfolio {
+        display: flex;
+        flex-direction: column;
         .portfolio-website-img {
             width: 22rem;
             height: 15rem;
@@ -594,6 +617,19 @@ form {
         P {
             width: 100%;
         }
+        h1 {
+            order: 1;
+        }
+        .featured-project {
+            order: 2;
+        }
+        .portfolio-website-img-container {
+            order: 3;
+        }
+        .project-info {
+            order: 4;
+        }
+
 
     }
     #contact {
@@ -604,6 +640,7 @@ form {
         svg {
             display: none;
         }
+
 
     }
 

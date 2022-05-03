@@ -12,15 +12,15 @@ const Portfolio = (props) => {
     return (
         <div ref={componentRef}  className="reveal" id="portfolio">
             <h1>Some Things That I Have Built</h1>
-            <div>
+            <div className='portfolio-website-img-container'>
                 <a title="External Link" href="https://www.realcreativefutures.co.uk/" target="_blank" rel="noreferrer">
                     <div className="portfolio-website-img">
                             <div className="img-overlay" />
                     </div>
                 </a>
             </div>
-            <div>
-                <h3>Featured Project</h3>
+            <h3 className="featured-project">Featured Project</h3>
+            <div className="project-info">
                 <h2>Real Creative Futures Website</h2>
                 <p>A website that acts as a portal for Real Creative Futures participants. The portal allows people to see past and future events. The events are stored on MongoDB and called through the API on the backend.</p> 
                 <ul>

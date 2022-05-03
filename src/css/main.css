@@ -57,6 +57,7 @@ p {
   width: inherit;
   transition: all 1s;
   opacity: 0.5;
+  border-radius: 0.25rem;
 }
 
 .img-overlay:hover {
@@ -76,26 +77,6 @@ p {
   opacity: 1;
 }
 
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 4em;
-  width: 12em;
-  background-color: transparent;
-  color: #eb175d;
-  border: 2px solid #eb175d;
-  border-radius: 0.5em;
-  cursor: pointer;
-  margin: 1rem;
-  transition: all 0.5s;
-}
-
-.button:hover {
-  background-color: #eb175d;
-  color: white;
-}
-
 .active-link {
   color: white;
 }
@@ -107,6 +88,63 @@ p {
     font-family: font-one;
   }
 }
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 50px 50px 250px;
+  text-decoration: none;
+  font-family: font-one;
+  height: 4em;
+  width: 12em;
+  text-align: center;
+  color: #eb175d;
+  border: 2px solid #eb175d;
+  border-radius: 0.5em;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.button:hover {
+  color: white;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-top: 2rem solid #eb175d;
+  border-bottom: 2rem solid #eb175d;
+  border-right: 2rem solid transparent;
+  transition: all 0.5s;
+  z-index: -1;
+  transform: translateX(-100%);
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-top: 2rem solid #eb175d;
+  border-bottom: 2rem solid #eb175d;
+  border-left: 2rem solid transparent;
+  transition: all 0.5s;
+  z-index: -1;
+  transform: translateX(100%);
+}
+
+.button:hover::before,
+.button:hover::after {
+  transform: translateX(0);
+}
+
 @font-face {
   font-family: "font-one";
   src: url("../JetBrainsMono-VariableFont_wght.ttf");
@@ -166,6 +204,7 @@ p {
   width: inherit;
   transition: all 1s;
   opacity: 0.5;
+  border-radius: 0.25rem;
 }
 
 .img-overlay:hover {
@@ -185,26 +224,6 @@ p {
   opacity: 1;
 }
 
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 4em;
-  width: 12em;
-  background-color: transparent;
-  color: #eb175d;
-  border: 2px solid #eb175d;
-  border-radius: 0.5em;
-  cursor: pointer;
-  margin: 1rem;
-  transition: all 0.5s;
-}
-
-.button:hover {
-  background-color: #eb175d;
-  color: white;
-}
-
 .active-link {
   color: white;
 }
@@ -216,6 +235,63 @@ p {
     font-family: font-one;
   }
 }
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 50px 50px 250px;
+  text-decoration: none;
+  font-family: font-one;
+  height: 4em;
+  width: 12em;
+  text-align: center;
+  color: #eb175d;
+  border: 2px solid #eb175d;
+  border-radius: 0.5em;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.button:hover {
+  color: white;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-top: 2rem solid #eb175d;
+  border-bottom: 2rem solid #eb175d;
+  border-right: 2rem solid transparent;
+  transition: all 0.5s;
+  z-index: -1;
+  transform: translateX(-100%);
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-top: 2rem solid #eb175d;
+  border-bottom: 2rem solid #eb175d;
+  border-left: 2rem solid transparent;
+  transition: all 0.5s;
+  z-index: -1;
+  transform: translateX(100%);
+}
+
+.button:hover::before,
+.button:hover::after {
+  transform: translateX(0);
+}
+
 #splash-screen {
   display: flex;
   height: 100vh;
@@ -300,14 +376,12 @@ nav #hamburger {
   justify-content: center;
 }
 #hero h1 {
-  font-family: JetBrainsMono;
   color: #e2e2e2;
   font-size: 2rem;
 }
 #hero h3 {
   color: #eb175d;
   font-size: 1.5rem;
-  font-family: IBMPlexSans-Regular;
 }
 #hero #hero-buttons {
   display: flex;
@@ -332,6 +406,7 @@ nav #hamburger {
   background-image: url("../hide-pain-harold.jpg");
   height: 200px;
   width: 200px;
+  border-radius: 0.25rem;
   background-position: center;
   background-color: #cccccc;
   /* Used if the image is unavailable */
@@ -349,8 +424,13 @@ nav #hamburger {
 #experience h2 span {
   color: #eb175d;
 }
+#experience ul {
+  padding: 0;
+}
 #experience li {
   color: #b9b9b9;
+  list-style-type: disc;
+  margin: 1rem;
 }
 
 #portfolio {
@@ -379,6 +459,9 @@ nav #hamburger {
   position: relative;
   width: 110%;
 }
+#portfolio .featured-project {
+  color: #eb175d;
+}
 #portfolio .portfolio-outside-links {
   flex-direction: row;
 }
@@ -389,6 +472,15 @@ nav #hamburger {
   width: 600px;
   margin: 1rem;
   filter: grayscale(0.25);
+  border-radius: 0.25rem;
+}
+#portfolio .portfolio-outside-links {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+#portfolio .portfolio-outside-links a {
+  margin: 1rem;
 }
 
 #contact {
@@ -505,21 +597,6 @@ nav #hamburger {
   top: -0.25rem;
   color: #eb175d;
 }
-#contact input[type=submit] {
-  height: 40%;
-  width: 50%;
-  background: none;
-  border: 2px solid #eb175d;
-  border-radius: 20px;
-  color: #eb175d;
-  font-size: 1rem;
-  transition: all 0.2s;
-}
-#contact input[type=submit]:hover {
-  background-color: #eb175d;
-  color: white;
-}
-
 form #contact-details {
   display: flex;
   flex-direction: column;
@@ -619,8 +696,7 @@ form #submit div {
     left: 0;
     height: 100vh;
     width: 100%;
-    display: flex;
-    animation: hamburger-appear 0.5s forwards;
+    display: none;
   }
 
   #ham-items {
@@ -661,12 +737,28 @@ form #submit div {
     padding: 0;
   }
 
+  #portfolio {
+    display: flex;
+    flex-direction: column;
+  }
   #portfolio .portfolio-website-img {
     width: 22rem;
     height: 15rem;
   }
   #portfolio P {
     width: 100%;
+  }
+  #portfolio h1 {
+    order: 1;
+  }
+  #portfolio .featured-project {
+    order: 2;
+  }
+  #portfolio .portfolio-website-img-container {
+    order: 3;
+  }
+  #portfolio .project-info {
+    order: 4;
   }
 
   #contact form {
@@ -742,12 +834,24 @@ form #submit {
   grid-column: 2/span 1;
   grid-row: 5/span 1;
   display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: 10% auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 10% 10% auto;
 }
 #portfolio h1 {
   grid-column: 1/span 2;
   grid-row: 1/span 1;
+}
+#portfolio .portfolio-website-img-container {
+  grid-column: 1/span 1;
+  grid-row: 2/span 2;
+}
+#portfolio .project-info {
+  grid-column: 2/span 1;
+  grid-row: 3/span 1;
+}
+#portfolio .featured-project {
+  grid-column: 2/span 1;
+  grid-row: 2/span 1;
 }
 #portfolio div ul {
   display: flex;

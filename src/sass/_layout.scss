@@ -55,12 +55,29 @@ form {
     grid-row: 5 / span 1;
 
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: 10% auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10% 10% auto;
     h1 {
         grid-column: 1/ span 2;
         grid-row: 1/ span 1;
     }
+
+    .portfolio-website-img-container {
+        grid-column: 1/ span 1;
+        grid-row: 2/ span 2;
+    }
+
+    .project-info {
+        grid-column: 2/ span 1;
+        grid-row: 3/ span 1;
+    }
+
+    .featured-project {
+        grid-column: 2/ span 1;
+        grid-row: 2/ span 1;
+    }
+
+
     div ul {
         display: flex;
         width: 100%;
