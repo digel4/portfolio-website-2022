@@ -61,7 +61,7 @@ const Contact = (props) => {
                     </div>
                     <div>
                         <input className="input-field" placeholder="subject"type="text" name="subject" required/>
-                        <label className="label" htmlFor="subject">subject</label>
+                        <label className="label" htmlFor="subject">Subject</label>
                     </div>
                 </div>  
                 
@@ -73,7 +73,9 @@ const Contact = (props) => {
 
                 
                 <div id="submit">
-                    <input type="submit" className="button" value="Send" />
+                    <div className="button">
+                        <input type="submit" value="Send"/>
+                    </div>
                     <div>
                         <p className="message-success hide-message">Message sent!</p>
                         <p className="message-fail hide-message">Message failed</p>

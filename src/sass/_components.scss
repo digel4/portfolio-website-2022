@@ -94,6 +94,41 @@ nav {
 }
 
 /////////////////////////////////////
+//                        RESUME
+////////////////////////////////////
+
+#resume {
+    height: 100%;
+    width: 100%;
+    top: 8vh;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+    label {
+        position: relative;
+        top:0;
+        color: white;
+        // right: 25rem;
+        height: 0.5rem;
+        width: 0.5rem;
+        cursor: pointer;
+
+    }
+    div {
+        //position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.resume-hide {
+    display: none;
+}
+
+
+
+/////////////////////////////////////
 //                        HERO
 ////////////////////////////////////
 #hero {
@@ -376,18 +411,22 @@ nav {
     }
     input[type="submit"] {
 
-        // height: 40%;
-        // width: 50%;
-        // background: none;
-        // border: 2px solid var.$secondary-color;;
+        height: inherit;
+        width: inherit;
+        background: none;
+        color: var.$secondary-color;
+        border: none;
         // border-radius: 20px;
         // color: var.$secondary-color;
         // font-size: var.$small-text;
-        // transition: all 0.2s;
+        transition: all 0.5s;
+        font-family: font-one;
+        font-size: 100%;
     }
     input[type="submit"]:hover {
         // background-color: var.$secondary-color;
-        // color: white;
+        color: white;
+        cursor: pointer;
     }
     margin-bottom: 20vh;
 }
@@ -426,8 +465,8 @@ form {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 20%;
-        width: 40%;
+        // height: 20%;
+        // width: 40%;
         position: relative;
     }
 }
@@ -609,9 +648,10 @@ form {
         display: flex;
         flex-direction: column;
         .portfolio-website-img {
-            width: 22rem;
-            height: 15rem;
-            //display: block;
+            width: 20rem;
+            height: 12rem;
+            background-size: contain;
+            margin:0;
     
         }
         P {

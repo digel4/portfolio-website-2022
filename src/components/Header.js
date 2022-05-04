@@ -63,6 +63,11 @@ const Header = (props) => {
     //)
 
 
+        const displayResume = () => {
+            const resume = document.querySelector("#resume");
+            resume.classList.toggle("resume-hide");
+        }
+
     return (
         <div id="header">
             <div className="icon">
@@ -82,11 +87,11 @@ const Header = (props) => {
                 <input onClick={() => {swapIcon()}} type="checkbox" id="hamburger" />
                 <div id="ham-items-container">
                     <ul id="ham-items">
-                        <li onClick={() => { scrollFunction("about"); activateLi(1) }}>About</li>
-                        <li onClick={() => { scrollFunction("experience"); activateLi(2) } }>Experience</li>
-                        <li onClick={() => { scrollFunction("portfolio"); activateLi(3) } }>Work</li>
-                        <li onClick={() => { scrollFunction("contact"); activateLi(4) } }>Contact</li>
-                        <li href="/" target="_blank" rel="noreferrer">Resume</li>
+                        <li onClick={ () => { scrollFunction("about"); activateLi(1) }}>About</li>
+                        <li onClick={ () => { scrollFunction("experience"); activateLi(2) } }>Experience</li>
+                        <li onClick={ () => { scrollFunction("portfolio"); activateLi(3) } }>Work</li>
+                        <li onClick={ () => { scrollFunction("contact"); activateLi(4) } }>Contact</li>
+                        <li onClick={ () => { displayResume(); activateLi(5) } }>Resume</li>
                     </ul>
                 </div>
             </nav>

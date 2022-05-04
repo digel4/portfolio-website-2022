@@ -8,6 +8,7 @@ import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Aside from './components/Aside';
+import Resume from './components/Resume'
 import { useRef, useEffect, useLayoutEffect, useState } from "react"
 
 import Placeholder from './components/Placeholder'
@@ -66,6 +67,7 @@ function App() {
       <div id="grid-container">
         {/* <Placeholder /> */}
         <Header scrollFunction={scrollFunction}/>
+        <Resume />
         <Hero scrollFunction={scrollFunction}/>
         <About appearOnScroll={appearOnScroll}  />
         <Experience appearOnScroll={appearOnScroll}  />

@@ -15,7 +15,6 @@ const Experience = (props) => {
             <h1>Where I've Worked</h1>
             <div>
                 <h2>Assistant Project Manager <span>@ New Art Exchange / Real Creative Futures</span></h2>
-                <h3>dates</h3>
                 <h4>March 2019 - present</h4>
                 <ul>
                     <li>Built the Real Creative Futures portal website from scratch</li>

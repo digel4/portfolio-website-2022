@@ -105,6 +105,81 @@ p {
 
 
 
+
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  text-decoration: none;
+  background-color: transparent;
+  font-size: 100%;
+
+  font-family: font-one;
+  height: 4em;
+  width: 12em;
+
+  text-align: center;
+  color: $secondary-color;
+  border: 2px solid $secondary-color;
+  border-radius: 0.5em;
+  position: relative;
+  overflow: hidden;
+
+  transition: all 0.5s;
+}
+
+.button:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-top: 2rem solid $secondary-color;
+  border-bottom: 2rem solid $secondary-color;
+  border-right: 2rem solid transparent;
+
+
+  transition: all 0.5s;
+  z-index: -1;
+  transform: translateX(-100%);
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-top: 2rem solid $secondary-color;
+  border-bottom: 2rem solid $secondary-color;
+  border-left: 2rem solid transparent;
+  transition: all 0.5s;
+  z-index: -1;
+  transform: translateX(100%);
+}
+
+.button:hover::before,
+.button:hover::after {
+  transform: translateX(0);
+}
+
+
+input {
+  color-scheme: dark;
+}
+
+
+
+
 @media only screen and (max-width: 600px) {
   html {
     background-color: $primary-color;
@@ -146,72 +221,10 @@ p {
 
 
 
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 50px 50px 50px 250px;
-  text-decoration: none;
+// input:-internal-autofill-selected {
+//   appearance: menulist-button;
+//   background:transparent;
+//   background-color: $primary-color ;
+//   color: white;
+// }
 
-  font-family: font-one;
-  height: 4em;
-  width: 12em;
-
-  text-align: center;
-  color: $secondary-color;
-  border: 2px solid $secondary-color;
-  border-radius: 0.5em;
-  position: relative;
-  overflow: hidden;
-
-  transition: all 0.5s;
-}
-
-.button:hover {
-  color: white;
-}
-
-.button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  border-top: 2rem solid $secondary-color;
-  border-bottom: 2rem solid $secondary-color;
-  border-right: 2rem solid transparent;
-
-
-  transition: all 0.5s;
-  z-index: -1;
-  transform: translateX(-100%);
-}
-
-.button::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  border-top: 2rem solid $secondary-color;
-  border-bottom: 2rem solid $secondary-color;
-  border-left: 2rem solid transparent;
-  transition: all 0.5s;
-  z-index: -1;
-  transform: translateX(100%);
-}
-
-.button:hover::before,
-.button:hover::after {
-  transform: translateX(0);
-}
-
-
-
-
-
-
-
-  
