@@ -6,7 +6,7 @@ const Experience = (props) => {
     const componentRef = useRef(null);
 
     useLayoutEffect( () => {
-        appearOnScroll(componentRef)
+        appearOnScroll(componentRef, "experience")
     }, []);
 
 

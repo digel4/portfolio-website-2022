@@ -5,7 +5,7 @@ const Portfolio = (props) => {
     const { appearOnScroll } = props;
 
     useLayoutEffect( () => {
-        appearOnScroll(componentRef)
+        appearOnScroll(componentRef, "portfolio")
     }, []);
 
 

@@ -11,7 +11,7 @@ const About = (props) => {
 
     
     useLayoutEffect( () => {
-        appearOnScroll(componentRef)
+        appearOnScroll(componentRef, "about")
     }, []);
 
 

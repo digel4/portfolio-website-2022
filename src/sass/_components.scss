@@ -103,9 +103,15 @@ nav {
     position: fixed;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.6);
+    #resume-container {
+        display: flex;
+        margin-top: 2rem;
+
+    }
     label {
+        margin-left:1rem;
         position: relative;
-        top:0;
+        //top:0;
         color: white;
         // right: 25rem;
         height: 0.5rem;
@@ -117,7 +123,6 @@ nav {
         //position: relative;
         display: flex;
         justify-content: center;
-        align-items: center;
     }
 }
 

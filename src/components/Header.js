@@ -1,9 +1,28 @@
 
 
 const Header = (props) => {
-    const { scrollFunction } = props;
+    const { scrollFunction, locationReferences } = props;
 
     const activateLi = (child) => {
+
+        const aboutElement = document.querySelector('#about');
+        const experienceElement = document.querySelector('#experience');
+        const portfolioElement = document.querySelector('#portfolio');
+        const contactElement = document.querySelector('#contact');
+
+
+        const scrollPosition = window.scrollY + window.innerHeight;
+        // const topPosition = locationReferences.heroRef.current.getBoundingClientRect().top;
+        const aboutRef = aboutElement.getBoundingClientRect().top;
+        const experienceRef = experienceElement.getBoundingClientRect().top;
+        const portfolioRef = portfolioElement.getBoundingClientRect().top;
+        const contactRef = contactElement.getBoundingClientRect().top;
+
+        console.log(aboutRef)
+        console.log(experienceRef)
+        console.log(portfolioRef)
+        console.log(contactRef)
+
         const allLinks = document.querySelectorAll('#ham-items-container ul li')
         const activeLink = document.querySelector(`#ham-items-container ul :nth-child(${child})`);
         // const selectedLi = document.querySelector(`nav`);
@@ -19,6 +38,8 @@ const Header = (props) => {
         input.checked = false;
         // console.log(allLis)
         swapIcon();
+
+
     }
 
     const swapIcon = () => {
@@ -87,10 +108,22 @@ const Header = (props) => {
                 <input onClick={() => {swapIcon()}} type="checkbox" id="hamburger" />
                 <div id="ham-items-container">
                     <ul id="ham-items">
-                        <li onClick={ () => { scrollFunction("about"); activateLi(1) }}>About</li>
-                        <li onClick={ () => { scrollFunction("experience"); activateLi(2) } }>Experience</li>
-                        <li onClick={ () => { scrollFunction("portfolio"); activateLi(3) } }>Work</li>
-                        <li onClick={ () => { scrollFunction("contact"); activateLi(4) } }>Contact</li>
+                        <li onClick={ () => { 
+                            scrollFunction("about"); 
+                            // activateLi(1) 
+                            }}>About</li>
+                        <li onClick={ () => { 
+                            scrollFunction("experience"); 
+                            // activateLi(2) 
+                            } }>Experience</li>
+                        <li onClick={ () => { 
+                            scrollFunction("portfolio"); 
+                            // activateLi(3) 
+                            } }>Work</li>
+                        <li onClick={ () => { 
+                            scrollFunction("contact"); 
+                            // activateLi(4) 
+                            } }>Contact</li>
                         <li onClick={ () => { displayResume(); activateLi(5) } }>Resume</li>
                     </ul>
                 </div>

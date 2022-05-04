@@ -22,10 +22,11 @@ const Resume = () => {
     return (
         <div id="resume" className="resume-hide">
             <div id="resume-container">
-                <label onClick={ () => {hideResume()} }htmlFor="Document">&#88;</label>
+                
                 <Document file={resume} onLoadSuccess={onDocumentLoadSuccess}>
                     <Page pageNumber={pageNumber} />
                 </Document>
+                <label onClick={ () => {hideResume()} }htmlFor="Document">&#88;</label>
             </div>
         </div>
     )

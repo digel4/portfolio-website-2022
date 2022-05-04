@@ -38,7 +38,7 @@ const Contact = (props) => {
 
 
     useLayoutEffect( () => {
-        appearOnScroll(componentRef)
+        appearOnScroll(componentRef, 'contact')
     }, []);
 
 
