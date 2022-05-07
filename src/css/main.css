@@ -349,6 +349,10 @@ input {
   fill: white;
 }
 
+#grid-container .hidden {
+  top: -20vh;
+}
+
 nav {
   display: flex;
   justify-content: flex-start;
