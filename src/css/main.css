@@ -729,7 +729,6 @@ form #submit div {
     position: fixed;
     left: 0;
     height: 5vh;
-    z-index: 2;
     padding: 1rem;
     justify-content: space-around;
     width: 100%;
@@ -746,8 +745,9 @@ form #submit div {
     font-size: 2.5em;
     margin: 0;
   }
-  nav input {
+  nav #hamburger {
     display: block;
+    visibility: hidden;
   }
 
   #ham-items-container {
@@ -829,10 +829,6 @@ form #submit div {
     display: flex;
     flex-direction: column;
   }
-  #contact svg {
-    display: none;
-  }
-
   #aside {
     position: static;
     display: flex;

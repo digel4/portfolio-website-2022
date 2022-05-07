@@ -52,6 +52,7 @@ const Header = (props) => {
     const swapIcon = () => {
         const label = document.querySelector('nav label');
         const input = document.querySelector('nav input')
+        console.log("hit swapIcon")
         if (input.checked === false) {
             label.innerHTML = "&#9776";
             label.classList.toggle("active")
@@ -196,8 +197,11 @@ const Header = (props) => {
 
 
         const displayResume = () => {
+            const input = document.querySelector('nav input')
             const resume = document.querySelector("#resume");
             resume.classList.toggle("resume-hide");
+            input.checked = false;
+            swapBurgerMenuIcon();
         }
         // style={{ top: visible ? '0' : '-60px' }}
     return (
@@ -235,7 +239,7 @@ const Header = (props) => {
                             scrollFunction("contact"); 
                             // activateLi(4) 
                             } }>Contact</li>
-                        <li onClick={ () => { displayResume(); activateLi(5) } }>Resume</li>
+                        <li onClick={ () => { displayResume(); } }>Resume</li>
                     </ul>
                 </div>
             </nav>

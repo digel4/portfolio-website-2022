@@ -42,8 +42,11 @@ function App() {
       inline: 'start'
     });
     const input = document.querySelector('nav input')
-    input.checked = false;
-    swapBurgerMenuIcon();
+    if(element !== "root" && window.innerWidth < 600) {
+      input.checked = false;
+      swapBurgerMenuIcon();
+    }
+
   }
   
   const appearOnScroll = (componentRef, componentName) => {
@@ -120,7 +123,7 @@ function App() {
       <div id="grid-container">
         {/* <Placeholder /> */}
         <Header scrollFunction={scrollFunction} swapBurgerMenuIcon={swapBurgerMenuIcon}/>
-        <Resume />
+        <Resume swapBurgerMenuIcon={swapBurgerMenuIcon} />
         <Hero  scrollFunction={scrollFunction}/>
         <About appearOnScroll={appearOnScroll}  />
         <Experience appearOnScroll={appearOnScroll}  />

@@ -5,7 +5,9 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 //import { Document, Page } from  'react-pdf/dist/entry.parcel';
 
 
-const Resume = () => {
+const Resume = (props) => {
+
+    const { swapBurgerMenuIcon } = props;
 
     const [numPages, setNumPages] = useState(null);
     const [pageNumber, setPageNumber] = useState(1);
@@ -26,7 +28,7 @@ const Resume = () => {
                 <Document file={resume} onLoadSuccess={onDocumentLoadSuccess}>
                     <Page pageNumber={pageNumber} />
                 </Document>
-                <label onClick={ () => {hideResume()} }htmlFor="Document">&#88;</label>
+                <label onClick={ () => {hideResume(); } }htmlFor="Document">&#88;</label>
             </div>
         </div>
     )
