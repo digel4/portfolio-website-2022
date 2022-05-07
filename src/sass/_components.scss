@@ -37,15 +37,17 @@
 ////////////////////////////////////
 #header {
     animation: splash-screen-svg-fade-in 0.5s;
+    position: fixed;
     color: var.$secondary-color;
     width: 100%;
     display: flex;
     justify-content: space-between;
     background-color: var.$primary-color;
     // background-color: red;
-    height: 9vh;
+    // height: 9vh;
     top: 0;
     z-index: 1;
+    transition: top 0.2s;
     svg {
         fill: var.$secondary-color;
         transition: all 0.5s;
@@ -54,6 +56,9 @@
         fill: white;
     }
 }
+// #grid-container .hidden {
+//     top: -20vh;
+// }
 
 nav {
     display: flex;
@@ -180,9 +185,9 @@ nav {
         justify-content: center;
     }
     #head-shot{
-        background-image: url("../hide-pain-harold.jpg");
-        height: 200px;
-        width: 200px;
+        background-image: url("../portfolioPicture.png");
+        height: 20rem;
+        width: 20rem;
         border-radius: 0.25rem;
         background-position: center;
         background-color: #cccccc; /* Used if the image is unavailable */
@@ -540,10 +545,12 @@ form {
         position: fixed;
         // top: 0;
         left: 0;
+        height: 5vh;
         z-index: 2;
         padding: 1rem;
         justify-content: space-around;
         width: 100%;
+        
     }
 
     nav {
@@ -571,7 +578,7 @@ form {
         position: absolute;
         // z-index: 3;
         // display: none;
-        top: 10vh;
+        top: 8vh;
         left: 0;
         height: 100vh;
         width: 100%;
@@ -584,11 +591,12 @@ form {
         font-weight: 1000;
         letter-spacing: 0.25rem;
 		padding: 0;
+        margin: 0;
 		position: absolute;
         background-color: $primary-color;
 		z-index: 1;
         left:0;
-		// top: 5vh;
+		//top: 5vh;
 		display: none;
         //opacity: 1;
         //justify-content: center;

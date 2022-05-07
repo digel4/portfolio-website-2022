@@ -1,7 +1,11 @@
-
-
+import React, { useState, useEffect } from 'react';
+import { debounce } from '../utilities/helpers';
 const Header = (props) => {
-    const { scrollFunction, locationReferences } = props;
+    const { scrollFunction, swapBurgerMenuIcon } = props;
+
+
+
+
 
     const activateLi = (child) => {
 
@@ -37,20 +41,127 @@ const Header = (props) => {
         console.log(input.checked)
         input.checked = false;
         // console.log(allLis)
-        swapIcon();
-
-
+        //swapIcon();
+        swapBurgerMenuIcon();
     }
+
+
+
+
 
     const swapIcon = () => {
         const label = document.querySelector('nav label');
         const input = document.querySelector('nav input')
         if (input.checked === false) {
             label.innerHTML = "&#9776";
+            label.classList.toggle("active")
         } else {
             label.innerHTML = "&#88";
+            label.classList.toggle("active")
         } 
     }
+
+    //Fixed NavBar Logic
+
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [visible, setVisible] = useState(true);
+
+    // const handleScroll = () => {
+    //     const currentScrollPos = window.pageYOffset;
+    //     // console.log(`Current Scroll Position is: ${currentScrollPos}`)
+    //     // console.log(`Previous Scroll Position is: ${prevScrollPos}`)
+    //     // console.log(`Previous Scroll is different from Current Scroll by: ${prevScrollPos - currentScrollPos}`)
+    //     // setVisible((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 70) || currentScrollPos < 10);
+    //     setVisible((prevScrollPos > currentScrollPos) || currentScrollPos < 10);
+    //     //console.log(visible)
+
+    //     setPrevScrollPos(currentScrollPos);
+        
+    // }
+
+    // const handleScroll = () => {
+    //     console.log("Started handleScroll")
+    //     const currentScrollPos = window.pageYOffset;
+    //     // console.log(`Current Scroll Position is: ${currentScrollPos}`)
+    //     // console.log(`Previous Scroll Position is: ${prevScrollPos}`)
+    //     // console.log(`Previous Scroll is different from Current Scroll by: ${prevScrollPos - currentScrollPos}`)
+    //     // setVisible((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 70) || currentScrollPos < 10);
+    //     setVisible((prevScrollPos > currentScrollPos) || currentScrollPos < 10);
+    //     //console.log(visible)
+    //     if (visible) {
+    //         header.classList.remove("hidden")
+    //     } else {
+    //         header.classList.add("hidden")
+    //     }
+    //     setPrevScrollPos(currentScrollPos);
+        
+    // }
+    // const handleScroll = debounce( () => {
+    //     console.log("Started handleScroll")
+    //     const currentScrollPos = window.pageYOffset;
+    //     // console.log(`Current Scroll Position is: ${currentScrollPos}`)
+    //     // console.log(`Previous Scroll Position is: ${prevScrollPos}`)
+    //     // console.log(`Previous Scroll is different from Current Scroll by: ${prevScrollPos - currentScrollPos}`)
+    //     // setVisible((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 70) || currentScrollPos < 10);
+    //     setVisible((prevScrollPos > currentScrollPos) || currentScrollPos < 10);
+    //     //console.log(visible)
+    //     if (visible) {
+    //         header.classList.remove("hidden")
+    //     } else {
+    //         header.classList.add("hidden")
+    //     }
+    //     setPrevScrollPos(currentScrollPos);
+        
+    // })
+
+
+    useEffect(() => {
+        const header = document.querySelector('#header');
+
+        const handleScroll = debounce( () => {
+            console.log("triggered handleScroll")
+            const label = document.querySelector('nav label');
+            // console.log(label.classList.value)
+            if (label.classList.value !== "active"){ 
+                // console.log("Started handleScroll")
+                const currentScrollPos = window.pageYOffset;
+
+                // console.log(`Current Scroll Position is: ${currentScrollPos}`)
+                // console.log(`Previous Scroll Position is: ${prevScrollPos}`)
+                // console.log(`Previous Scroll is different from Current Scroll by: ${prevScrollPos - currentScrollPos}`)
+
+                // setVisible((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 70) || currentScrollPos < 10);
+
+                setVisible((prevScrollPos > currentScrollPos) || currentScrollPos < 10);
+                
+                setPrevScrollPos(currentScrollPos);
+            }
+            
+        }, 100)
+
+        if (visible) {
+            header.classList.remove("hidden")
+        } else {
+            header.classList.add("hidden")
+        }
+
+        
+        window.addEventListener('scroll', handleScroll);
+        // console.log(visible)
+
+        return () => window.removeEventListener('scroll', handleScroll);
+    
+      }, [prevScrollPos, visible]);
+
+    //   useEffect(() => {
+
+        
+    //     window.addEventListener('scroll', handleScroll);
+    
+    //     return () => window.removeEventListener('scroll', handleScroll);
+    
+    //   }, [prevScrollPos, visible, handleScroll]);
+
 
 
 
@@ -88,9 +199,9 @@ const Header = (props) => {
             const resume = document.querySelector("#resume");
             resume.classList.toggle("resume-hide");
         }
-
+        // style={{ top: visible ? '0' : '-60px' }}
     return (
-        <div id="header">
+        <div id="header" className="hidden">
             <div className="icon">
                 <a href="/">
                     <svg 

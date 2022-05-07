@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Aside from './components/Aside';
 import Resume from './components/Resume'
+import { debounce } from './utilities/helpers';
 import { useRef, useEffect, useLayoutEffect, useState } from "react"
 
 import Placeholder from './components/Placeholder'
@@ -19,9 +20,19 @@ import Placeholder from './components/Placeholder'
 
 function App() {
 
-  const heroRef = useRef(null)
-
   const [ isLoading, setIsLoading ] = useState(true);
+
+  const swapBurgerMenuIcon = () => {
+    const label = document.querySelector('nav label');
+    const input = document.querySelector('nav input')
+    if (input.checked === false) {
+        label.innerHTML = "&#9776";
+        label.classList.toggle("active")
+    } else {
+        label.innerHTML = "&#88";
+        label.classList.toggle("active")
+    } 
+}
 
   function scrollFunction(element) {
     const elementToSelect = document.getElementById(element);
@@ -30,15 +41,19 @@ function App() {
       behavior: 'smooth',
       inline: 'start'
     });
+    const input = document.querySelector('nav input')
+    input.checked = false;
+    swapBurgerMenuIcon();
   }
   
   const appearOnScroll = (componentRef, componentName) => {
   
     const topPosition = componentRef.current.getBoundingClientRect().top;
-
+    const midPosition = topPosition + componentRef.current.getBoundingClientRect().height;
   
-    const onScroll = () => {
+    const onScroll =  debounce( () => {
         const scrollPosition = window.scrollY + window.innerHeight;
+        console.log("triggered OnSrcoll")
 
         const changeActiveLink = () => {
           let child;
@@ -54,7 +69,7 @@ function App() {
             const allLinks = document.querySelectorAll('#ham-items-container ul li')
             const activeLink = document.querySelector(`#ham-items-container ul :nth-child(${child})`);
             // const selectedLi = document.querySelector(`nav`);
-            console.log(activeLink)
+            // console.log(activeLink)
             allLinks.forEach( (link) => {
                 if(link.className === 'active-link') {
                     link.classList.toggle('active-link')
@@ -63,22 +78,24 @@ function App() {
             activeLink.classList.toggle('active-link')
 
         }
-  
+        // console.log(`${componentName}: ${topPosition}`)
+        // console.log(`${scrollPosition}`)
+        if (midPosition < scrollPosition) {
+          //console.log("started changeActiveLink()")
+          changeActiveLink();
+        }
         if (topPosition < scrollPosition && componentRef.current.classList.contains('active') === false) {
             // console.log("triggered add")
             componentRef.current.classList.add('active')
-            changeActiveLink();
-
-
         } else if (topPosition > scrollPosition && componentRef.current.classList.contains('active') === true ) {
             // console.log("triggered remove")
             componentRef.current.classList.remove('active')
-
-            changeActiveLink();
+            //console.log("started changeActiveLink()")
+            //changeActiveLink();
 
 
         }
-    }
+    }, 100);
     window.addEventListener('scroll', onScroll);
   
     return () => window.removeEventListener('scroll', onScroll)
@@ -102,11 +119,11 @@ function App() {
     return (
       <div id="grid-container">
         {/* <Placeholder /> */}
-        <Header scrollFunction={scrollFunction} locationReferences={{ heroRef }}/>
+        <Header scrollFunction={scrollFunction} swapBurgerMenuIcon={swapBurgerMenuIcon}/>
         <Resume />
         <Hero  scrollFunction={scrollFunction}/>
         <About appearOnScroll={appearOnScroll}  />
-        <Experience ref={heroRef} appearOnScroll={appearOnScroll}  />
+        <Experience appearOnScroll={appearOnScroll}  />
         <Portfolio appearOnScroll={appearOnScroll}  />
         <Contact appearOnScroll={appearOnScroll} scrollFunction={scrollFunction}/>
         <Footer />
