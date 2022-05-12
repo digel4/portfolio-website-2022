@@ -15,7 +15,7 @@ a {
 
 html {
   background-color: #2c2c2c;
-  font-size: 150%;
+  font-size: 100%;
   font-family: font-one;
 }
 
@@ -88,70 +88,105 @@ p {
   margin: 1rem;
   text-decoration: none;
   background-color: transparent;
+  font-weight: 700;
   font-size: 100%;
   font-family: font-one;
-  height: 4em;
-  width: 12em;
+  height: 4rem;
+  width: 12rem;
   text-align: center;
   color: #eb175d;
-  border: 2px solid #eb175d;
+  border: 0.2rem solid #eb175d;
   border-radius: 0.5em;
   position: relative;
-  overflow: hidden;
   transition: all 0.5s;
 }
 
 .button:hover {
   color: white;
+  background-color: #eb175d;
   cursor: pointer;
-}
-
-.button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  border-top: 2rem solid #eb175d;
-  border-bottom: 2rem solid #eb175d;
-  border-right: 2rem solid transparent;
-  transition: all 0.5s;
-  z-index: -1;
-  transform: translateX(-100%);
-}
-
-.button::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  border-top: 2rem solid #eb175d;
-  border-bottom: 2rem solid #eb175d;
-  border-left: 2rem solid transparent;
-  transition: all 0.5s;
-  z-index: -1;
-  transform: translateX(100%);
-}
-
-.button:hover::before,
-.button:hover::after {
-  transform: translateX(0);
 }
 
 input {
   color-scheme: dark;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1800px) {
   html {
-    background-color: #2c2c2c;
     font-size: 100%;
-    font-family: font-one;
+  }
+
+  .portfolio-website-img-container .portfolio-website-img {
+    height: 22rem;
   }
 }
+@media only screen and (max-width: 1366px) {
+  html {
+    font-size: 100%;
+  }
+
+  .portfolio-website-img-container .portfolio-website-img {
+    height: 20rem;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  html {
+    font-size: 100%;
+  }
+
+  .portfolio-website-img-container .portfolio-website-img {
+    height: 18rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 100%;
+  }
+
+  .portfolio-website-img-container .portfolio-website-img {
+    height: 30rem;
+  }
+}
+@media only screen and (max-width: 700px) {
+  html {
+    font-size: 100%;
+  }
+
+  .portfolio-website-img-container .portfolio-website-img {
+    height: 22rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 100%;
+  }
+
+  .portfolio-website-img-container .portfolio-website-img {
+    height: 20rem;
+  }
+}
+@media only screen and (max-width: 414px) {
+  html {
+    font-size: 100%;
+  }
+
+  .portfolio-website-img-container .portfolio-website-img {
+    height: 16rem;
+  }
+}
+.portfolio-website-img-container {
+  width: 100%;
+}
+
+.portfolio-website-img {
+  background-image: url("../rcf-homepage.png");
+  position: relative;
+  width: 100%;
+  height: 24rem;
+  background-position: center;
+  background-size: cover;
+}
+
 @font-face {
   font-family: "font-one";
   src: url("../JetBrainsMono-VariableFont_wght.ttf");
@@ -169,7 +204,7 @@ a {
 
 html {
   background-color: #2c2c2c;
-  font-size: 150%;
+  font-size: 100%;
   font-family: font-one;
 }
 
@@ -242,70 +277,105 @@ p {
   margin: 1rem;
   text-decoration: none;
   background-color: transparent;
+  font-weight: 700;
   font-size: 100%;
   font-family: font-one;
-  height: 4em;
-  width: 12em;
+  height: 4rem;
+  width: 12rem;
   text-align: center;
   color: #eb175d;
-  border: 2px solid #eb175d;
+  border: 0.2rem solid #eb175d;
   border-radius: 0.5em;
   position: relative;
-  overflow: hidden;
   transition: all 0.5s;
 }
 
 .button:hover {
   color: white;
+  background-color: #eb175d;
   cursor: pointer;
-}
-
-.button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  border-top: 2rem solid #eb175d;
-  border-bottom: 2rem solid #eb175d;
-  border-right: 2rem solid transparent;
-  transition: all 0.5s;
-  z-index: -1;
-  transform: translateX(-100%);
-}
-
-.button::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  border-top: 2rem solid #eb175d;
-  border-bottom: 2rem solid #eb175d;
-  border-left: 2rem solid transparent;
-  transition: all 0.5s;
-  z-index: -1;
-  transform: translateX(100%);
-}
-
-.button:hover::before,
-.button:hover::after {
-  transform: translateX(0);
 }
 
 input {
   color-scheme: dark;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1800px) {
   html {
-    background-color: #2c2c2c;
     font-size: 100%;
-    font-family: font-one;
+  }
+
+  .portfolio-website-img-container .portfolio-website-img {
+    height: 22rem;
   }
 }
+@media only screen and (max-width: 1366px) {
+  html {
+    font-size: 100%;
+  }
+
+  .portfolio-website-img-container .portfolio-website-img {
+    height: 20rem;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  html {
+    font-size: 100%;
+  }
+
+  .portfolio-website-img-container .portfolio-website-img {
+    height: 18rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 100%;
+  }
+
+  .portfolio-website-img-container .portfolio-website-img {
+    height: 30rem;
+  }
+}
+@media only screen and (max-width: 700px) {
+  html {
+    font-size: 100%;
+  }
+
+  .portfolio-website-img-container .portfolio-website-img {
+    height: 22rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 100%;
+  }
+
+  .portfolio-website-img-container .portfolio-website-img {
+    height: 20rem;
+  }
+}
+@media only screen and (max-width: 414px) {
+  html {
+    font-size: 100%;
+  }
+
+  .portfolio-website-img-container .portfolio-website-img {
+    height: 16rem;
+  }
+}
+.portfolio-website-img-container {
+  width: 100%;
+}
+
+.portfolio-website-img {
+  background-image: url("../rcf-homepage.png");
+  position: relative;
+  width: 100%;
+  height: 24rem;
+  background-position: center;
+  background-size: cover;
+}
+
 #splash-screen {
   display: flex;
   height: 100vh;
@@ -316,7 +386,7 @@ input {
   position: relative;
   fill: #eb175d;
   width: 20vw;
-  animation: splash-screen-svg-fade-in 3s;
+  animation: splash-screen-svg-fade-in 1.5s;
 }
 
 @keyframes splash-screen-svg-fade-in {
@@ -376,6 +446,13 @@ nav label {
 nav #hamburger {
   display: none;
 }
+nav #ham-items {
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+  margin-right: 4rem;
+  padding: 0;
+}
 
 .icon {
   fill: #eb175d;
@@ -418,7 +495,6 @@ nav #hamburger {
   opacity: 0;
   animation: splash-screen-svg-fade-in 0.5s forwards 1s;
   display: flex;
-  margin: auto;
   flex-direction: column;
   justify-content: center;
 }
@@ -486,7 +562,7 @@ nav #hamburger {
 #portfolio h1 {
   color: #e2e2e2;
   font-size: 2rem;
-  margin: 0;
+  margin-bottom: 1rem;
 }
 #portfolio div {
   display: flex;
@@ -512,15 +588,6 @@ nav #hamburger {
 #portfolio .portfolio-outside-links {
   flex-direction: row;
 }
-#portfolio .portfolio-website-img {
-  background-image: url("../rcf-homepage.png");
-  background-size: cover;
-  height: 400px;
-  width: 600px;
-  margin: 1rem;
-  filter: grayscale(0.25);
-  border-radius: 0.25rem;
-}
 #portfolio .portfolio-outside-links {
   width: 100%;
   display: flex;
@@ -541,10 +608,9 @@ nav #hamburger {
 }
 #contact p {
   text-align: center;
+  width: 60%;
 }
 #contact svg {
-  border: 2px solid #eb175d;
-  border-radius: 100%;
   padding: 20px;
   margin: 20px;
   fill: #eb175d;
@@ -679,13 +745,22 @@ form #submit div {
   align-items: center;
   position: relative;
 }
+form .button {
+  margin-bottom: 0;
+}
 
 .message-success {
-  height: 100%;
   background-color: green;
+  color: white;
+  margin-top: 0;
   position: absolute;
-  width: 100%;
+  width: 11rem;
   transition: all 0.2s;
+  margin: 0;
+  top: 0;
+  border: solid 2px transparent;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .hide-message {
@@ -693,11 +768,17 @@ form #submit div {
 }
 
 .message-fail {
-  height: 100%;
   background-color: red;
+  margin-top: 0;
+  color: white;
   position: absolute;
-  width: 100%;
+  width: 11rem;
   transition: all 0.2s;
+  margin: 0;
+  top: 0;
+  border: solid 2px transparent;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 #aside {
@@ -718,7 +799,7 @@ form #submit div {
   justify-content: center;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   #hero #hero-buttons {
     display: flex;
     flex-direction: column;
@@ -728,7 +809,7 @@ form #submit div {
   #header {
     position: fixed;
     left: 0;
-    height: 5vh;
+    height: 10vh;
     padding: 1rem;
     justify-content: space-around;
     width: 100%;
@@ -753,14 +834,15 @@ form #submit div {
   #ham-items-container {
     overflow: hidden;
     position: absolute;
-    top: 8vh;
+    top: 10vh;
+    margin-top: 1rem;
     left: 0;
     height: 100vh;
     width: 100%;
     display: none;
   }
 
-  #ham-items {
+  nav #ham-items {
     font-weight: 1000;
     letter-spacing: 0.25rem;
     padding: 0;
@@ -775,6 +857,9 @@ form #submit div {
     height: 100vh;
     width: 100%;
     animation: hamburger-appear 0.5s forwards;
+  }
+  nav #ham-items li {
+    font-size: 140%;
   }
 
   nav input:checked ~ #ham-items-container #ham-items {
@@ -804,9 +889,6 @@ form #submit div {
     flex-direction: column;
   }
   #portfolio .portfolio-website-img {
-    width: 20rem;
-    height: 12rem;
-    background-size: contain;
     margin: 0;
   }
   #portfolio P {
@@ -825,6 +907,9 @@ form #submit div {
     order: 4;
   }
 
+  #contact P {
+    width: 100%;
+  }
   #contact form {
     display: flex;
     flex-direction: column;
@@ -840,6 +925,13 @@ form #submit div {
   }
   #aside li {
     display: inline;
+  }
+}
+@media only screen and (max-width: 375px) {
+  #hero #hero-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 #grid-container {
@@ -870,7 +962,6 @@ form {
   height: 100%;
   width: 100%;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 form #contact-details {
   grid-column: 1/span 1;
@@ -895,7 +986,7 @@ form #submit {
   grid-row: 5/span 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 10% 10% auto;
+  grid-template-rows: 20% 10% auto;
 }
 #portfolio h1 {
   grid-column: 1/span 2;
@@ -912,6 +1003,7 @@ form #submit {
 #portfolio .featured-project {
   grid-column: 2/span 1;
   grid-row: 2/span 1;
+  align-items: flex-end;
 }
 #portfolio div ul {
   display: flex;
@@ -934,7 +1026,18 @@ form #submit {
   grid-row: 2/span 7;
 }
 
-@media only screen and (max-width: 600px) {
+#portfolio .portfolio-website-img-container a {
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (max-width: 1400px) {
+  #grid-container {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 10vh 90vh auto auto auto auto auto;
+  }
+}
+@media only screen and (max-width: 1200px) {
   #grid-container {
     grid-template-columns: 5% 90% 5%;
   }
@@ -959,13 +1062,6 @@ form #submit {
     grid-row: 4/span 1;
   }
 
-  #portfolio {
-    grid-column: 2/span 1;
-    grid-row: 5/span 1;
-    display: flex;
-    flex-direction: column;
-  }
-
   #contact {
     grid-column: 2/span 1;
     grid-row: 6/span 1;
@@ -979,6 +1075,18 @@ form #submit {
   #footer {
     grid-column: 2/span 1;
     grid-row: 8/span 1;
+  }
+}
+@media only screen and (max-width: 900px) {
+  #grid-container {
+    grid-template-columns: 5% 90% 5%;
+  }
+
+  #portfolio {
+    grid-column: 2/span 1;
+    grid-row: 5/span 1;
+    display: flex;
+    flex-direction: column;
   }
 }
 
