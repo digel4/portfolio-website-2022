@@ -698,6 +698,13 @@ nav #ham-items {
 #portfolio .portfolio-outside-links a {
   margin: 1rem;
 }
+#portfolio .portfolio-outside-links a svg {
+  fill: #b9b9b9;
+  transition: all 0.2s;
+}
+#portfolio .portfolio-outside-links a svg:hover {
+  fill: white;
+}
 
 #portfolio .other-projects-container-title {
   width: 100%;
@@ -720,6 +727,7 @@ nav #ham-items {
   padding: 1rem;
   border: solid 2px transparent;
   border-radius: 4px;
+  transition: all 0.2s;
 }
 #portfolio .other-projects .other-projects-card .portfolio-outside-links {
   display: flex;
@@ -736,6 +744,10 @@ nav #ham-items {
 }
 #portfolio .other-projects .other-projects-card .other-projects-card-list {
   width: 100%;
+}
+
+.other-projects-card:hover {
+  transform: translateY(-1rem);
 }
 
 #contact {
@@ -923,9 +935,16 @@ form .button {
 }
 
 #aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   bottom: 0;
   left: -1%;
   position: fixed;
+}
+#aside .vertitcal-line {
+  border-left: 2px solid #eb175d;
+  height: 20rem;
 }
 #aside ul {
   margin: 1em;
@@ -1076,9 +1095,11 @@ form .button {
   }
   #aside {
     position: static;
-    display: flex;
     flex-direction: row;
     justify-content: center;
+  }
+  #aside .vertitcal-line {
+    display: none;
   }
   #aside ul {
     display: inline;

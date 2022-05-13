@@ -1,6 +1,7 @@
 const Aside = () => {
     return (
         <div id="aside">
+            <div className="vertitcal-line"></div>
             <ul>
                 <li>
                     <a title="LinkedIn" href="https://www.linkedin.com/in/oliver-fox-uk/" target="_blank" rel="noreferrer">

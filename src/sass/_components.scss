@@ -288,7 +288,15 @@ nav {
         //align-items: center;
         a {
             margin: 1rem;
+            svg {
+                fill: var.$small-text-color;
+                transition: all 0.2s;
+            }
+            svg:hover {
+                fill: white;
+            }
         }
+
     }
     margin-bottom: 20vh;
 }
@@ -322,6 +330,7 @@ nav {
     padding: 1rem;
     border: solid 2px transparent;
     border-radius: 4px;
+    transition: all 0.2s;
     .portfolio-outside-links {
         display: flex;
         flex-direction: row;
@@ -342,6 +351,10 @@ nav {
 
     }
 
+}
+
+.other-projects-card:hover {
+    transform: translateY(-1rem);
 }
 
 
@@ -575,6 +588,13 @@ form {
 ////////////////////////////////////
 
 #aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .vertitcal-line {
+        border-left: 2px solid var.$secondary-color;
+        height: 20rem;
+    }
     bottom: 0;
     left: -1%;
     position: fixed;
@@ -813,9 +833,11 @@ form {
 
     #aside {
         position: static;
-        display: flex;
         flex-direction: row;
         justify-content: center;
+            .vertitcal-line {
+                display: none;
+            }
         ul {
             display: inline;
         }

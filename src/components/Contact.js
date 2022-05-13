@@ -9,33 +9,33 @@ const Contact = (props) => {
 
     const sendEmail = (e) => {
         e.preventDefault();
-        const messageError = document.querySelector(".message-fail")
-        messageError.classList.toggle("hide-message");
+        // const messageError = document.querySelector(".message-fail")
+        // messageError.classList.toggle("hide-message");
 
-        // emailjs.sendForm('service_uhiq51a', 'template_hf7qgns', form.current, '0ANbtcaZxjr4bt4LZ')
-        // .then((result) => {
-        //     console.log(result.text);
-        //     const messageSuccess = document.querySelector(".message-success")
-        //     messageSuccess.classList.toggle("hide-message");
+        emailjs.sendForm('service_uhiq51a', 'template_hf7qgns', form.current, '0ANbtcaZxjr4bt4LZ')
+        .then((result) => {
+            console.log(result.text);
+            const messageSuccess = document.querySelector(".message-success")
+            messageSuccess.classList.toggle("hide-message");
 
-        //     setTimeout(() => {
-        //         messageSuccess.classList.toggle("hide-message");
-        //       }, 6000);
+            setTimeout(() => {
+                messageSuccess.classList.toggle("hide-message");
+              }, 6000);
 
-        //     const formInputs = document.querySelectorAll(".input-field")
-        //     //console.log(formInputs)
+            const formInputs = document.querySelectorAll(".input-field")
+            //console.log(formInputs)
 
-        //     formInputs.forEach( (input) => {
-        //         input.value = "";
-        //     })
-        // }, (error) => {
-        //     console.log(error.text);
-        //     const messageError = document.querySelector(".message-fail")
-        //     messageError.classList.toggle("hide-message");
-        //     setTimeout(() => {
-        //         messageError.classList.toggle("hide-message");
-        //       }, 6000);
-        // });
+            formInputs.forEach( (input) => {
+                input.value = "";
+            })
+        }, (error) => {
+            console.log(error.text);
+            const messageError = document.querySelector(".message-fail")
+            messageError.classList.toggle("hide-message");
+            setTimeout(() => {
+                messageError.classList.toggle("hide-message");
+              }, 6000);
+        });
     };
 
 
