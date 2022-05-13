@@ -269,6 +269,8 @@ input {
   width:100%;
 }
 .portfolio-website-img {
+    filter: grayscale(0.25);
+    border-radius: 0.25rem;
     background-image: url("../rcf-homepage.png");
     position: relative;
     width: 100%;
