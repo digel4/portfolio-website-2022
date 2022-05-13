@@ -113,19 +113,25 @@ nav {
     height: 100%;
     width: 100%;
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.6);
     #resume-container {
         display: flex;
         margin-top: 2rem;
-
+        .buttons {
+            display: flex;
+            position: absolute;
+            top: 70%;
+        }
     }
     label {
         margin-left:1rem;
-        position: relative;
+        position: absolute;
         //top:0;
         color: white;
-        // right: 25rem;
+        right:30%;
         height: 0.5rem;
         width: 0.5rem;
         cursor: pointer;
@@ -286,6 +292,59 @@ nav {
     }
     margin-bottom: 20vh;
 }
+
+// portfolio-outside-links
+#portfolio .other-projects-container-title {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+#portfolio .other-projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    // .other-projects-row {
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: space-around;
+    //     margin-top: 2rem;
+    // }
+}
+.other-project-one {
+
+}
+#portfolio .other-projects .other-projects-card {
+    display: flex;
+    background-color: var.$primary-color-lighter;
+    width: 26%;
+    margin-top: 2rem;
+    padding: 1rem;
+    border: solid 2px transparent;
+    border-radius: 4px;
+    .portfolio-outside-links {
+        display: flex;
+        flex-direction: row;
+    }
+    .other-projects-card-title {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .other-projects-card-description {
+        p { 
+            width: 100%;
+        }
+    }
+    .other-projects-card-list {
+        width: 100%;
+
+    }
+
+}
+
+
 
 /////////////////////////////////////
 //                        CONTACT
@@ -542,6 +601,26 @@ form {
 
 
 
+@media only screen and (max-width: 700px) {
+    #resume-container {
+        display: flex;
+        margin-top: 2rem;
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 70%;
+        }
+        .document {
+            canvas{
+                width: 350px !important;
+                height: 550px !important;
+            }
+        }
+    }
+}
+
+
 
 @media only screen and (max-width: 900px) {
     #hero #hero-buttons {
@@ -696,9 +775,27 @@ form {
         .project-info {
             order: 4;
         }
+        .other-projects-container {
+            order: 5;
+        }
 
 
     }
+
+    // #portfolio .other-projects {
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: space-around;
+    // flex-wrap: wrap;
+    // .other-projects-row {
+    //     display: flex;
+    //     flex-direction: row;
+    //     flex-wrap: wrap;
+    //     justify-content: space-around;
+    //     margin-top: 2rem;
+    // }
+
+
     #contact {
         P {
             width:100%;
@@ -742,3 +839,32 @@ form {
         align-items: center;
     }
 }
+
+@media only screen and (max-width: 1800px) {
+    #portfolio .other-projects .other-projects-card {
+        width: 22rem;
+    }
+}
+
+
+
+// #portfolio .other-projects {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-around;
+//     .other-projects-row {
+//         display: flex;
+//         flex-direction: row;
+//         justify-content: space-around;
+//         margin-top: 2rem;
+//     }
+// }
+// .other-project-one {
+
+// }
+// #portfolio .other-projects .other-projects-card {
+//     display: flex;
+//     background-color: var.$primary-color-lighter;
+//     width: 25%;
+//     border: solid 2px transparent;
+//     border-radius: 4px;
