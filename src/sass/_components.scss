@@ -119,11 +119,18 @@ nav {
     background-color: rgba(0, 0, 0, 0.6);
     #resume-container {
         display: flex;
-        margin-top: 2rem;
+        margin-top: 10rem;
         .buttons {
             display: flex;
             position: absolute;
-            top: 70%;
+            //flex-direction: column;
+            //right: 1%;
+            top: 2rem;
+
+        }
+        canvas {
+            width: 550px !important;
+            height: 750px !important;
         }
     }
     label {
@@ -622,19 +629,21 @@ form {
 
 
 @media only screen and (max-width: 700px) {
-    #resume-container {
-        display: flex;
-        margin-top: 2rem;
-        .buttons {
+    #resume {
+        #resume-container {
             display: flex;
-            flex-direction: column;
-            position: absolute;
-            top: 70%;
-        }
-        .document {
-            canvas{
-                width: 350px !important;
-                height: 550px !important;
+            margin-top: 2rem;
+            .buttons {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 70%;
+            }
+            .document {
+                canvas{
+                    width: 350px !important;
+                    height: 550px !important;
+                }
             }
         }
     }

@@ -568,12 +568,16 @@ nav #ham-items {
 }
 #resume #resume-container {
   display: flex;
-  margin-top: 2rem;
+  margin-top: 10rem;
 }
 #resume #resume-container .buttons {
   display: flex;
   position: absolute;
-  top: 70%;
+  top: 2rem;
+}
+#resume #resume-container canvas {
+  width: 550px !important;
+  height: 750px !important;
 }
 #resume label {
   margin-left: 1rem;
@@ -960,17 +964,17 @@ form .button {
 }
 
 @media only screen and (max-width: 700px) {
-  #resume-container {
+  #resume #resume-container {
     display: flex;
     margin-top: 2rem;
   }
-  #resume-container .buttons {
+  #resume #resume-container .buttons {
     display: flex;
     flex-direction: column;
     position: absolute;
     top: 70%;
   }
-  #resume-container .document canvas {
+  #resume #resume-container .document canvas {
     width: 350px !important;
     height: 550px !important;
   }
