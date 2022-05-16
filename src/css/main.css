@@ -1,11 +1,11 @@
 @font-face {
   font-family: "font-one";
-  src: url("../JetBrainsMono-VariableFont_wght.ttf");
+  src: url("../assets/JetBrainsMono-VariableFont_wght.ttf");
   /* IE9 Compat Modes */
 }
 @font-face {
   font-family: "font-two";
-  src: url("../IBMPlexSans-Regular.ttf");
+  src: url("../assets/IBMPlexSans-Regular.ttf");
   /* IE9 Compat Modes */
 }
 a {
@@ -226,22 +226,29 @@ input {
 .portfolio-website-img {
   filter: grayscale(0.25);
   border-radius: 0.25rem;
-  background-image: url("../rcf-homepage.png");
+  background-image: url("../assets/rcf-homepage.png");
   position: relative;
   width: 100%;
   height: 32rem;
   background-position: center;
   background-size: cover;
+  transition: all 0.2s;
+}
+
+.portfolio-website-img:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
+  z-index: 2;
 }
 
 @font-face {
   font-family: "font-one";
-  src: url("../JetBrainsMono-VariableFont_wght.ttf");
+  src: url("../assets/JetBrainsMono-VariableFont_wght.ttf");
   /* IE9 Compat Modes */
 }
 @font-face {
   font-family: "font-two";
-  src: url("../IBMPlexSans-Regular.ttf");
+  src: url("../assets/IBMPlexSans-Regular.ttf");
   /* IE9 Compat Modes */
 }
 a {
@@ -462,12 +469,19 @@ input {
 .portfolio-website-img {
   filter: grayscale(0.25);
   border-radius: 0.25rem;
-  background-image: url("../rcf-homepage.png");
+  background-image: url("../assets/rcf-homepage.png");
   position: relative;
   width: 100%;
   height: 32rem;
   background-position: center;
   background-size: cover;
+  transition: all 0.2s;
+}
+
+.portfolio-website-img:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
+  z-index: 2;
 }
 
 #splash-screen {
@@ -506,6 +520,7 @@ input {
   transition: top 0.2s;
 }
 #header svg {
+  padding: 1rem;
   fill: #eb175d;
   transition: all 0.5s;
 }
@@ -530,6 +545,13 @@ nav li {
   color: #eb175d;
   display: inline;
   transition: all 0.25s;
+}
+nav li a {
+  color: #eb175d;
+  transition: all 0.25s;
+}
+nav li a:hover {
+  color: white;
 }
 nav li:hover {
   color: white;
@@ -557,46 +579,6 @@ nav #ham-items {
   fill: white;
 }
 
-#resume {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-#resume #resume-container {
-  display: flex;
-  margin-top: 10rem;
-}
-#resume #resume-container .buttons {
-  display: flex;
-  position: absolute;
-  top: 2rem;
-}
-#resume #resume-container canvas {
-  width: 550px !important;
-  height: 750px !important;
-}
-#resume label {
-  margin-left: 1rem;
-  position: absolute;
-  color: white;
-  right: 30%;
-  height: 0.5rem;
-  width: 0.5rem;
-  cursor: pointer;
-}
-#resume div {
-  display: flex;
-  justify-content: center;
-}
-
-.resume-hide {
-  display: none;
-}
-
 #hero {
   opacity: 0;
   animation: splash-screen-svg-fade-in 0.5s forwards 1s;
@@ -622,8 +604,38 @@ nav #ham-items {
 #about h1 {
   color: white;
 }
+#about .skills-logos {
+  display: flex;
+  justify-content: center;
+}
+#about ul {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
 #about li {
+  width: 15rem;
+  text-align: center;
   color: 1rem;
+}
+#about li img {
+  height: 5rem;
+}
+#about .about-me-info p {
+  font-family: font-two;
+  letter-spacing: 0.1rem;
+  line-height: 1.5rem;
+}
+#about .skills {
+  margin-top: 10rem;
+  background-color: #474747;
+  border: solid 1px #474747;
+  border-radius: 10px;
+}
+#about .skills h1 {
+  padding: 1rem;
 }
 #about div {
   display: flex;
@@ -632,7 +644,7 @@ nav #ham-items {
   justify-content: center;
 }
 #about #head-shot {
-  background-image: url("../portfolioPicture.png");
+  background-image: url("../assets/portfolioPicture.png");
   height: 20rem;
   width: 20rem;
   border-radius: 0.25rem;
@@ -644,6 +656,11 @@ nav #ham-items {
   background-size: cover;
   /* Resize the background image to cover the entire container */
   filter: grayscale(0.25);
+  transition: all 0.2s;
+}
+#about #head-shot:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
 }
 
 #experience {
@@ -683,10 +700,21 @@ nav #ham-items {
   font-size: 1rem;
   color: #eb175d;
 }
+#portfolio div ul li {
+  color: white;
+}
 #portfolio p {
+  font-family: font-two;
   background-color: #474747;
+  letter-spacing: 0.1rem;
+  line-height: 2rem;
   position: relative;
   width: 110%;
+}
+#portfolio .project-info p {
+  padding: 1.5rem;
+  border: solid 1px #474747;
+  border-radius: 10px;
 }
 #portfolio .featured-project {
   color: #eb175d;
@@ -700,7 +728,7 @@ nav #ham-items {
   justify-content: flex-end;
 }
 #portfolio .portfolio-outside-links a {
-  margin: 1rem;
+  margin-left: 1rem;
 }
 #portfolio .portfolio-outside-links a svg {
   fill: #b9b9b9;
@@ -716,11 +744,12 @@ nav #ham-items {
   align-items: flex-start;
 }
 
-#portfolio .other-projects {
+#portfolio .other-projects-container .other-projects {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 #portfolio .other-projects .other-projects-card {
@@ -739,6 +768,7 @@ nav #ham-items {
 }
 #portfolio .other-projects .other-projects-card .other-projects-card-title {
   width: 100%;
+  letter-spacing: 0.2rem;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -748,6 +778,9 @@ nav #ham-items {
 }
 #portfolio .other-projects .other-projects-card .other-projects-card-list {
   width: 100%;
+}
+#portfolio .other-projects .other-projects-card .other-projects-card-list ul li {
+  color: white;
 }
 
 .other-projects-card:hover {
@@ -882,6 +915,10 @@ nav #ham-items {
   cursor: pointer;
 }
 
+form {
+  height: 100%;
+  width: 50%;
+}
 form #contact-details {
   display: flex;
   flex-direction: column;
@@ -963,29 +1000,51 @@ form .button {
   justify-content: center;
 }
 
-@media only screen and (max-width: 700px) {
-  #resume #resume-container {
-    display: flex;
-    margin-top: 2rem;
+@media only screen and (max-width: 730px) {
+  #about h1 {
+    color: white;
   }
-  #resume #resume-container .buttons {
+  #about ul {
     display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 70%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
-  #resume #resume-container .document canvas {
-    width: 350px !important;
-    height: 550px !important;
+  #about li {
+    width: 15rem;
+    text-align: center;
+    color: 1rem;
+  }
+  #about li img {
+    height: 4rem;
   }
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 500px) {
   #hero #hero-buttons {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
+  #about h1 {
+    color: white;
+  }
+  #about ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  #about li {
+    width: 10rem;
+    text-align: center;
+    color: 1rem;
+  }
+  #about li img {
+    height: 3rem;
+  }
+}
+@media only screen and (max-width: 900px) {
   #header {
     position: fixed;
     left: 0;
@@ -1072,7 +1131,7 @@ form .button {
     margin: 0;
   }
   #portfolio P {
-    width: 100%;
+    width: 90%;
   }
   #portfolio h1 {
     order: 1;
@@ -1094,9 +1153,14 @@ form .button {
     width: 100%;
   }
   #contact form {
+    width: 80%;
     display: flex;
     flex-direction: column;
   }
+  #contact form #message {
+    height: 12rem;
+  }
+
   #aside {
     position: static;
     flex-direction: row;
@@ -1145,25 +1209,19 @@ form .button {
   grid-row: 3/span 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
 }
-
-form {
-  display: grid;
-  height: 100%;
-  width: 100%;
-  grid-template-columns: 1fr 1fr;
-}
-form #contact-details {
+#about .about-me-info {
   grid-column: 1/span 1;
-  grid-row: 1/span 3;
+  grid-row: 1/span 1;
 }
-form #message {
+#about #head-shot {
   grid-column: 2/span 1;
-  grid-row: 1/span 3;
+  grid-row: 1/span 1;
 }
-form #submit {
+#about .skills {
   grid-column: 1/span 2;
-  grid-row: 4/span 1;
+  grid-row: 2/span 1;
 }
 
 #experience {
@@ -1176,7 +1234,6 @@ form #submit {
   grid-row: 5/span 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 20% 10% auto;
 }
 #portfolio h1 {
   grid-column: 1/span 2;
@@ -1207,6 +1264,23 @@ form #submit {
 #contact {
   grid-column: 2/span 1;
   grid-row: 6/span 1;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+form #contact-details {
+  grid-column: 1/span 1;
+  grid-row: 1/span 3;
+}
+form #message {
+  grid-column: 2/span 1;
+  grid-row: 1/span 3;
+}
+form #submit {
+  grid-column: 1/span 2;
+  grid-row: 4/span 1;
 }
 
 #footer {
@@ -1280,6 +1354,26 @@ form #submit {
     grid-row: 5/span 1;
     display: flex;
     flex-direction: column;
+  }
+
+  #about {
+    grid-column: 2/span 1;
+    grid-row: 3/span 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+  #about .about-me-info {
+    grid-column: 1/span 1;
+    grid-row: 1/span 1;
+  }
+  #about #head-shot {
+    grid-column: 1/span 1;
+    grid-row: 2/span 1;
+  }
+  #about .skills {
+    grid-column: 1/span 2;
+    grid-row: 3/span 1;
   }
 }
 

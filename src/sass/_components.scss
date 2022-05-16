@@ -49,6 +49,7 @@
     z-index: 1;
     transition: top 0.2s;
     svg {
+        padding: 1rem;
         fill: var.$secondary-color;
         transition: all 0.5s;
     }
@@ -73,6 +74,13 @@ nav {
         color: var.$secondary-color;
         display: inline;
         transition: all 0.25s;
+        a {
+            color: var.$secondary-color;
+            transition: all 0.25s;
+        }
+        a:hover {
+            color: white;
+        }
         
     }
     li:hover {
@@ -104,57 +112,6 @@ nav {
 .icon:hover {
     fill: white;
 }
-
-/////////////////////////////////////
-//                        RESUME
-////////////////////////////////////
-
-#resume {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.6);
-    #resume-container {
-        display: flex;
-        margin-top: 10rem;
-        .buttons {
-            display: flex;
-            position: absolute;
-            //flex-direction: column;
-            //right: 1%;
-            top: 2rem;
-
-        }
-        canvas {
-            width: 550px !important;
-            height: 750px !important;
-        }
-    }
-    label {
-        margin-left:1rem;
-        position: absolute;
-        //top:0;
-        color: white;
-        right:30%;
-        height: 0.5rem;
-        width: 0.5rem;
-        cursor: pointer;
-
-    }
-    div {
-        //position: relative;
-        display: flex;
-        justify-content: center;
-    }
-}
-
-.resume-hide {
-    display: none;
-}
-
 
 
 /////////////////////////////////////
@@ -194,8 +151,42 @@ nav {
     h1 {
         color: white;
     }
+    .skills-logos {
+        display: flex;
+        justify-content: center;
+    }
+    ul {
+        padding: 1rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+    }
     li {
-        color: var.$small-text
+        // display: flex;
+        // flex-direction: column;
+        width: 15rem;
+        text-align: center;
+        color: var.$small-text;
+        img {
+            height: 5rem;
+            //width: 5rem;
+        }
+    }
+    .about-me-info p {
+        font-family: font-two;
+        letter-spacing: 0.1rem;
+        line-height: 1.5rem;
+    }
+    .skills {
+        margin-top: 10rem;
+        background-color: var.$primary-color-lighter;
+        border: solid 1px var.$primary-color-lighter;
+        border-radius: 10px;
+        h1 {
+            padding: 1rem;
+        }
+
     }
     div {
         display: flex;
@@ -203,8 +194,8 @@ nav {
         flex-direction: column;
         justify-content: center;
     }
-    #head-shot{
-        background-image: url("../portfolioPicture.png");
+    #head-shot {
+        background-image: url("../assets/portfolioPicture.png");
         height: 20rem;
         width: 20rem;
         border-radius: 0.25rem;
@@ -213,6 +204,12 @@ nav {
         background-position: center; /* Center the image */
         background-size: cover; /* Resize the background image to cover the entire container */
         filter: grayscale(0.25);
+        transition: all 0.2s;
+    }
+
+    #head-shot:hover {
+        filter: grayscale(0);
+        transform: scale(1.1);
     }
 
     margin-bottom: 20vh;
@@ -270,11 +267,22 @@ nav {
             font-size: var.$small-text;
             color: var.$secondary-color;
         }
+        ul li {
+            color: white;
+        }
     }
     p {
+        font-family: font-two;
         background-color: var.$primary-color-lighter;
+        letter-spacing: 0.1rem;
+        line-height: 2rem;
         position: relative;
         width: 110%
+    }
+    .project-info p {
+        padding: 1.5rem;
+        border: solid 1px var.$primary-color-lighter;
+        border-radius: 10px;
     }
 
     .featured-project {
@@ -283,18 +291,12 @@ nav {
     .portfolio-outside-links{
         flex-direction: row;
     }
-    .portfolio-website-img {
-        // background-image: url("../rcf-homepage.png");
-        // filter: grayscale(0.25);
-        // border-radius: 0.25rem;
-    }
     .portfolio-outside-links {
         width: 100%;
         display: flex;
         justify-content: flex-end;
-        //align-items: center;
         a {
-            margin: 1rem;
+            margin-left: 1rem;
             svg {
                 fill: var.$small-text-color;
                 transition: all 0.2s;
@@ -314,20 +316,18 @@ nav {
     display: flex;
     align-items: flex-start;
 }
-#portfolio .other-projects {
+#portfolio .other-projects-container .other-projects {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+    align-items: flex-start;
     // .other-projects-row {
     //     display: flex;
     //     flex-direction: row;
     //     justify-content: space-around;
     //     margin-top: 2rem;
     // }
-}
-.other-project-one {
-
 }
 #portfolio .other-projects .other-projects-card {
     display: flex;
@@ -344,6 +344,7 @@ nav {
     }
     .other-projects-card-title {
         width: 100%;
+        letter-spacing: 0.2rem;
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;
@@ -355,7 +356,9 @@ nav {
     }
     .other-projects-card-list {
         width: 100%;
-
+        ul li {
+            color: white;
+        }
     }
 
 }
@@ -526,6 +529,8 @@ nav {
 
 form {
     // grid-column: 1 /span 2;
+    height: 100%;
+    width: 50%;
     #contact-details {
         display: flex;
         flex-direction: column;
@@ -628,22 +633,57 @@ form {
 
 
 
-@media only screen and (max-width: 700px) {
-    #resume {
-        #resume-container {
+@media only screen and (max-width: 730px) {
+    #about {
+        h1 {
+            color: white;
+        }
+        ul {
             display: flex;
-            margin-top: 2rem;
-            .buttons {
-                display: flex;
-                flex-direction: column;
-                position: absolute;
-                top: 70%;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        li {
+            // display: flex;
+            // flex-direction: column;
+            width: 15rem;
+            text-align: center;
+            color: var.$small-text;
+            img {
+                height: 4rem;
+                //width: 5rem;
             }
-            .document {
-                canvas{
-                    width: 350px !important;
-                    height: 550px !important;
-                }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #hero #hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    #about {
+        h1 {
+            color: white;
+        }
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        li {
+            // display: flex;
+            // flex-direction: column;
+            width: 10rem;
+            text-align: center;
+            color: var.$small-text;
+            img {
+                height: 3rem;
+                //width: 5rem;
             }
         }
     }
@@ -652,11 +692,7 @@ form {
 
 
 @media only screen and (max-width: 900px) {
-    #hero #hero-buttons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+
 
     #header {
         position: fixed;
@@ -790,7 +826,7 @@ form {
 
         }
         P {
-            width: 100%;
+            width: 90%;
         }
         h1 {
             order: 1;
@@ -830,11 +866,12 @@ form {
             width:100%;
         }
         form {
+            width: 80%;
             display: flex;
             flex-direction: column;
-        }
-        svg {
-            //display: none;
+            #message {
+                height: 12rem;
+            }
         }
 
 

@@ -53,11 +53,16 @@ function App() {
   
     const topPosition = componentRef.current.getBoundingClientRect().top;
     const midPosition = topPosition + componentRef.current.getBoundingClientRect().height;
+    const positionToChangeActiveLink = topPosition + (window.innerHeight / 2);
+    console.log(`${componentName}. Change Position: ${positionToChangeActiveLink}`)
+    // console.log("top position")
+    // console.log(topPosition)
+    // console.log("mid position")
+    // console.log(midPosition)
   
     const onScroll =  debounce( () => {
         const scrollPosition = window.scrollY + window.innerHeight;
-        console.log("triggered OnSrcoll")
-
+        console.log(scrollPosition)
         const changeActiveLink = () => {
           let child;
             if(componentName === "about") {
@@ -68,35 +73,31 @@ function App() {
               child = 3;
             } else if (componentName === "contact"){
               child = 4;
+            } else if (componentName === "hero"){
+              child = null;
             }
             const allLinks = document.querySelectorAll('#ham-items-container ul li')
-            const activeLink = document.querySelector(`#ham-items-container ul :nth-child(${child})`);
-            // const selectedLi = document.querySelector(`nav`);
-            // console.log(activeLink)
             allLinks.forEach( (link) => {
-                if(link.className === 'active-link') {
-                    link.classList.toggle('active-link')
-                }
+              if(link.className === 'active-link') {
+                  link.classList.toggle('active-link')
+              }
             })
-            activeLink.classList.toggle('active-link')
+            if (child) {
+              const activeLink = document.querySelector(`#ham-items-container ul :nth-child(${child})`);
+              activeLink.classList.toggle('active-link')
+            }
+            
+
+            
 
         }
-        // console.log(`${componentName}: ${topPosition}`)
-        // console.log(`${scrollPosition}`)
-        if (midPosition < scrollPosition) {
-          //console.log("started changeActiveLink()")
+        if (positionToChangeActiveLink < scrollPosition) {
           changeActiveLink();
         }
         if (topPosition < scrollPosition && componentRef.current.classList.contains('active') === false) {
-            // console.log("triggered add")
             componentRef.current.classList.add('active')
         } else if (topPosition > scrollPosition && componentRef.current.classList.contains('active') === true ) {
-            // console.log("triggered remove")
             componentRef.current.classList.remove('active')
-            //console.log("started changeActiveLink()")
-            //changeActiveLink();
-
-
         }
     }, 100);
     window.addEventListener('scroll', onScroll);
@@ -121,10 +122,8 @@ function App() {
 
     return (
       <div id="grid-container">
-        {/* <Placeholder /> */}
         <Header scrollFunction={scrollFunction} swapBurgerMenuIcon={swapBurgerMenuIcon}/>
-        <Resume swapBurgerMenuIcon={swapBurgerMenuIcon} />
-        <Hero  scrollFunction={scrollFunction}/>
+        <Hero  scrollFunction={scrollFunction} appearOnScroll={appearOnScroll}/>
         <About appearOnScroll={appearOnScroll}  />
         <Experience appearOnScroll={appearOnScroll}  />
         <Portfolio appearOnScroll={appearOnScroll}  />

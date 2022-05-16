@@ -24,26 +24,21 @@
     grid-row: 3 / span 1;
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
-form {
-    display: grid;
-    height: 100%;
-    width: 100%;
-    grid-template-columns: 1fr 1fr;
-    //grid-template-rows: 1fr 1fr 1fr 1fr;
-    #contact-details {
-        grid-column: 1 / span 1;
-        grid-row: 1 / span 3;
+    grid-template-rows: auto auto;
+    .about-me-info {
+        grid-column: 1/ span 1;
+        grid-row: 1/ span 1;
     }
-    #message {
-        grid-column: 2 / span 1;
-        grid-row: 1 / span 3;
+    #head-shot {
+        grid-column: 2/ span 1;
+        grid-row: 1/ span 1; 
     }
-    #submit {
-        grid-column: 1 / span 2;
-        grid-row: 4 / span 1;
+    .skills {
+        grid-column: 1/ span 2;
+        grid-row: 2/ span 1; 
     }
 }
+
 
 #experience {
     grid-column: 2/ span 1;
@@ -56,7 +51,7 @@ form {
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 20% 10% auto;
+    //grid-template-rows: 20% 10% auto;
     h1 {
         grid-column: 1/ span 2;
         grid-row: 1/ span 1;
@@ -98,6 +93,24 @@ form {
     grid-row: 6 / span 1;
 
     //height: 80vh;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    //grid-template-rows: 1fr 1fr 1fr 1fr;
+    #contact-details {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 3;
+    }
+    #message {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 3;
+    }
+    #submit {
+        grid-column: 1 / span 2;
+        grid-row: 4 / span 1;
+    }
 }
 
 #footer {
@@ -215,5 +228,25 @@ form {
         flex-direction: column;
     
         //height: 100vh;
+    }
+
+    #about {
+        grid-column: 2/ span 1;
+        grid-row: 3 / span 1;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        .about-me-info {
+            grid-column: 1/ span 1;
+            grid-row: 1/ span 1;
+        }
+        #head-shot {
+            grid-column: 1/ span 1;
+            grid-row: 2/ span 1; 
+        }
+        .skills {
+            grid-column: 1/ span 2;
+            grid-row: 3/ span 1; 
+        }
     }
 }
