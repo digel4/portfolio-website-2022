@@ -9,7 +9,7 @@ const Contact = (props) => {
 
     const sendEmail = (e) => {
         e.preventDefault();
-        // const messageError = document.querySelector(".message-fail")
+        // const messageError = document.querySelector(".message-success")
         // messageError.classList.toggle("hide-message");
 
         emailjs.sendForm('service_uhiq51a', 'template_hf7qgns', form.current, '0ANbtcaZxjr4bt4LZ')

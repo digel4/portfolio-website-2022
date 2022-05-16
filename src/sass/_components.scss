@@ -563,7 +563,7 @@ form {
     }
 }
 
-.message-success {
+#contact form #submit .message-success {
     background-color: green;
     color: white;
     margin-top: 0;
@@ -581,7 +581,7 @@ form {
     opacity: 0;
 }
 
-.message-fail {
+#contact form #submit .message-fail {
     background-color: red;
     margin-top: 0;
     color: white;
