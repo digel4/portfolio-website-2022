@@ -78,6 +78,7 @@
         display: flex;
         width: 100%;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
     .other-projects-container {
         grid-column: 1/ span 2;

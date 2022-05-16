@@ -1185,7 +1185,7 @@ form .button {
 }
 @media only screen and (max-width: 1800px) {
   #portfolio .other-projects .other-projects-card {
-    width: 22rem;
+    width: 20rem;
   }
 }
 #grid-container {
@@ -1256,6 +1256,7 @@ form .button {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 #portfolio .other-projects-container {
   grid-column: 1/span 2;
