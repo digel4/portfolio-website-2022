@@ -29,7 +29,7 @@ const About = (props) => {
                 <div className="skills-logos">
                     <ul>
                         <li>
-                            <img src="assets/js.png" alt="JavaScript logo"/>
+                            <img src="assets/JS.png" alt="JavaScript logo"/>
                             <h4>JavaScript (ES6+)</h4>
                         </li>
                         <li>
