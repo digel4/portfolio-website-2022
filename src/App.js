@@ -54,15 +54,9 @@ function App() {
     const topPosition = componentRef.current.getBoundingClientRect().top;
     const midPosition = topPosition + componentRef.current.getBoundingClientRect().height;
     const positionToChangeActiveLink = topPosition + (window.innerHeight / 2);
-    console.log(`${componentName}. Change Position: ${positionToChangeActiveLink}`)
-    // console.log("top position")
-    // console.log(topPosition)
-    // console.log("mid position")
-    // console.log(midPosition)
   
     const onScroll =  debounce( () => {
         const scrollPosition = window.scrollY + window.innerHeight;
-        console.log(scrollPosition)
         const changeActiveLink = () => {
           let child;
             if(componentName === "about") {
