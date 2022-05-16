@@ -1054,6 +1054,10 @@ form .button {
     width: 100%;
   }
 
+  #header svg {
+    padding: 0;
+  }
+
   nav {
     width: 3rem;
     display: flex;
