@@ -12,30 +12,34 @@ const Contact = (props) => {
         // const messageError = document.querySelector(".message-success")
         // messageError.classList.toggle("hide-message");
 
-        emailjs.sendForm('service_uhiq51a', 'template_hf7qgns', form.current, '0ANbtcaZxjr4bt4LZ')
-        .then((result) => {
-            console.log(result.text);
-            const messageSuccess = document.querySelector(".message-success")
-            messageSuccess.classList.toggle("hide-message");
-
-            setTimeout(() => {
+        if (e.target[0].value && e.target[1].value && e.target[2].value && e.target[3].value) {
+            emailjs.sendForm('service_uhiq51a', 'template_hf7qgns', form.current, '0ANbtcaZxjr4bt4LZ')
+            .then((result) => {
+                console.log(result.text);
+                const messageSuccess = document.querySelector(".message-success")
                 messageSuccess.classList.toggle("hide-message");
-              }, 6000);
-
-            const formInputs = document.querySelectorAll(".input-field")
-            //console.log(formInputs)
-
-            formInputs.forEach( (input) => {
-                input.value = "";
-            })
-        }, (error) => {
-            console.log(error.text);
-            const messageError = document.querySelector(".message-fail")
-            messageError.classList.toggle("hide-message");
-            setTimeout(() => {
+    
+                setTimeout(() => {
+                    messageSuccess.classList.toggle("hide-message");
+                  }, 6000);
+    
+                const formInputs = document.querySelectorAll(".input-field")
+                //console.log(formInputs)
+    
+                formInputs.forEach( (input) => {
+                    input.value = "";
+                })
+            }, (error) => {
+                console.log(error.text);
+                const messageError = document.querySelector(".message-fail")
                 messageError.classList.toggle("hide-message");
-              }, 6000);
-        });
+                setTimeout(() => {
+                    messageError.classList.toggle("hide-message");
+                  }, 6000);
+            });
+        }
+
+
     };
 
 
@@ -62,7 +66,7 @@ const Contact = (props) => {
                         <label className="label" htmlFor="email">Email</label>
                     </div>
                     <div>
-                        <input className="input-field" placeholder="subject"type="text" name="subject" required/>
+                        <input className="input-field" placeholder="subject"type="text" name="subject" required />
                         <label className="label" htmlFor="subject">Subject</label>
                     </div>
                 </div>  

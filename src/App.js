@@ -100,19 +100,19 @@ function App() {
     return () => window.removeEventListener('scroll', onScroll)
   }
 
-  useEffect( () => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1500);
-  })
+  // useEffect( () => {
+  //   setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, 1500);
+  // })
 
 
 
-  if (isLoading) {
-    return (
-      <SplashScreen />
-    )
-  } else {
+  // if (isLoading) {
+  //   return (
+  //     <SplashScreen />
+  //   )
+  // } else {
 
 
     return (
@@ -128,6 +128,6 @@ function App() {
       </div>
     );
   }
-}
+// }
 
 export default App;
