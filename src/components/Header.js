@@ -75,10 +75,10 @@ const Header = (props) => {
                             scrollFunction("about"); 
                             // activateLi(1) 
                             }}>About</li>
-                        <li onClick={ () => { 
+                        {/* <li onClick={ () => { 
                             scrollFunction("experience"); 
                             // activateLi(2) 
-                            } }>Experience</li>
+                            } }>Experience</li> */}
                         <li onClick={ () => { 
                             scrollFunction("portfolio"); 
                             // activateLi(3) 

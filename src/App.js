@@ -61,12 +61,13 @@ function App() {
           let child;
             if(componentName === "about") {
               child = 1;
-            } else if (componentName === "experience"){
+            } 
+            // else if (componentName === "experience"){
+            //   child = 2;} 
+            else if (componentName === "portfolio"){
               child = 2;
-            } else if (componentName === "portfolio"){
-              child = 3;
             } else if (componentName === "contact"){
-              child = 4;
+              child = 3;
             } else if (componentName === "hero"){
               child = null;
             }
@@ -119,7 +120,7 @@ function App() {
         <Header scrollFunction={scrollFunction} swapBurgerMenuIcon={swapBurgerMenuIcon}/>
         <Hero  scrollFunction={scrollFunction} appearOnScroll={appearOnScroll}/>
         <About appearOnScroll={appearOnScroll}  />
-        <Experience appearOnScroll={appearOnScroll}  />
+        {/* <Experience appearOnScroll={appearOnScroll}  /> */}
         <Portfolio appearOnScroll={appearOnScroll}  />
         <Contact appearOnScroll={appearOnScroll} scrollFunction={scrollFunction}/>
         <Footer />
