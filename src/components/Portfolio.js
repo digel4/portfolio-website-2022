@@ -18,9 +18,10 @@ const Portfolio = (props) => {
                        
             <a title="External Link" href="https://rcfd-react.herokuapp.com/" target="_blank" rel="noreferrer"> 
                        
-                <div className="portfolio-website-img">
-                <div className="img-overlay"/>
-                </div>
+                <img className="portfolio-website-img" src="assets/rcfd-react-landing.png" alt="rcfd home page screenshot" />
+                    
+          
+                {/* <div className="img-overlay"/> */}
                 </a>
         
                     
@@ -32,12 +33,7 @@ const Portfolio = (props) => {
              <div className="project-info">
                  <h2>Real Creative Futures Website</h2>
                  <p>
-                     A website that acts as a portal for Real Creative Futures participants. React rebuild of the previous production website.
-                    <br/>
-                    The aim of the project was to build an attractive SPA which could display all the events being run by Real Creative Futures. The events are stored using MongoDB. There is also a basic content management system so a website admin can delete, modify and create new events and display them on the website. The admin login system uses a cookie based authorisation so there are no page refreshes during the login.
-                    <br />
-                    This is a development build so the the app is connected to a development db rather than production db. Login details are on the login page so you can experiment with the flow.
-                 </p>
+                     Real Creative Futures SPA which could display all the events being run by Real Creative Futures. The events are stored using MongoDB. Event CRUD functionality. Uses a cookie-based authentication with JSON web to enable silent refreshes. Login details are on the login page so you can experiment with the flow.
                  <ul>
                      <li>React</li>
                      <li>Redux</li>

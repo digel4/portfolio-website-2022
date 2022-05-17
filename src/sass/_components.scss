@@ -272,17 +272,17 @@ nav {
         }
     }
     p {
+        text-align: right;
         font-family: font-two;
-        background-color: var.$primary-color-lighter;
+        //background-color: var.$primary-color-lighter;
         letter-spacing: 0.1rem;
         line-height: 2rem;
         position: relative;
-        width: 110%
     }
     .project-info p {
-        padding: 1.5rem;
-        border: solid 1px var.$primary-color-lighter;
-        border-radius: 10px;
+        padding-left: 1.5rem;
+        // border: solid 1px var.$primary-color-lighter;
+        // border-radius: 10px;
     }
 
     .featured-project {
