@@ -668,6 +668,7 @@ nav #ham-items {
 }
 #portfolio .other-projects .other-projects-card .other-projects-card-description p {
   width: 100%;
+  text-align: left;
 }
 #portfolio .other-projects .other-projects-card .other-projects-card-list {
   width: 100%;
@@ -1027,20 +1028,26 @@ form .button {
   #portfolio .portfolio-website-img {
     margin: 0;
   }
-  #portfolio P {
-    width: 90%;
-  }
   #portfolio h1 {
     order: 1;
   }
   #portfolio .featured-project {
+    align-items: flex-start;
     order: 2;
   }
   #portfolio .portfolio-website-img-container {
     order: 3;
   }
   #portfolio .project-info {
+    align-items: flex-start;
     order: 4;
+  }
+  #portfolio .project-info P {
+    text-align: left;
+    padding-left: 0;
+  }
+  #portfolio .project-info ul {
+    padding-left: 0;
   }
   #portfolio .other-projects-container {
     order: 5;
@@ -1144,11 +1151,6 @@ form .button {
   grid-column: 2/span 1;
   grid-row: 3/span 1;
 }
-#portfolio .featured-project {
-  grid-column: 2/span 1;
-  grid-row: 2/span 1;
-  align-items: flex-end;
-}
 #portfolio div ul {
   display: flex;
   width: 100%;
@@ -1157,6 +1159,12 @@ form .button {
 }
 #portfolio .other-projects-container {
   grid-column: 1/span 2;
+}
+
+.featured-project {
+  grid-column: 2/span 1;
+  grid-row: 2/span 1;
+  align-items: flex-end;
 }
 
 #contact {

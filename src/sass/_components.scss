@@ -352,6 +352,7 @@ nav {
     .other-projects-card-description {
         p { 
             width: 100%;
+            text-align: left;
         }
     }
     .other-projects-card-list {
@@ -829,20 +830,29 @@ form {
             margin:0;
 
         }
-        P {
-            width: 90%;
-        }
+        // P {
+        //     width: 90%;
+        // }
         h1 {
             order: 1;
         }
         .featured-project {
+            align-items: flex-start;
             order: 2;
         }
         .portfolio-website-img-container {
             order: 3;
         }
         .project-info {
+            align-items: flex-start;
             order: 4;
+            P {
+                text-align: left;
+                padding-left: 0;
+            }
+            ul {
+                padding-left: 0;
+            }
         }
         .other-projects-container {
             order: 5;
