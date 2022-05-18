@@ -180,9 +180,14 @@ nav {
     }
     .skills {
         margin-top: 10rem;
-        background-color: var.$primary-color-lighter;
-        border: solid 1px var.$primary-color-lighter;
-        border-radius: 10px;
+        // background-color: var.$primary-color-lighter;
+        // border: solid 1px var.$primary-color-lighter;
+        // border-radius: 10px;
+        .skills-logos {
+            background-color: var.$primary-color-lighter;
+            border: solid 1px var.$primary-color-lighter;
+            border-radius: 10px;
+        }
         h1 {
             padding: 1rem;
         }
@@ -222,27 +227,27 @@ nav {
 ////////////////////////////////////
 
 
-#experience {
-    color: white;
-    h1 {
-    }
-    h2 {
+// #experience {
+//     color: white;
+//     h1 {
+//     }
+//     h2 {
 
-        span {
-            color: var.$secondary-color;
-        }
-    }
-    ul {
-        padding: 0;
-    }
-    li {
-        color: var.$small-text-color;
-        list-style-type: disc;
-        margin: 1rem;
+//         span {
+//             color: var.$secondary-color;
+//         }
+//     }
+//     ul {
+//         padding: 0;
+//     }
+//     li {
+//         color: var.$small-text-color;
+//         list-style-type: disc;
+//         margin: 1rem;
 
-    }
-    margin-bottom: 20vh;
-}
+//     }
+//     margin-bottom: 20vh;
+// }
 
 /////////////////////////////////////
 //                        PORTFOLIO
@@ -311,6 +316,9 @@ nav {
 }
 
 // portfolio-outside-links
+.other-projects-container {
+    margin-top: 2rem;
+}
 #portfolio .other-projects-container-title {
     width: 100%;
     display: flex;

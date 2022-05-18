@@ -526,6 +526,8 @@ nav #ham-items {
 }
 #about .skills {
   margin-top: 10rem;
+}
+#about .skills .skills-logos {
   background-color: #474747;
   border: solid 1px #474747;
   border-radius: 10px;
@@ -557,22 +559,6 @@ nav #ham-items {
 #about #head-shot:hover {
   filter: grayscale(0);
   transform: scale(1.1);
-}
-
-#experience {
-  color: white;
-  margin-bottom: 20vh;
-}
-#experience h2 span {
-  color: #eb175d;
-}
-#experience ul {
-  padding: 0;
-}
-#experience li {
-  color: #b9b9b9;
-  list-style-type: disc;
-  margin: 1rem;
 }
 
 #portfolio {
@@ -629,6 +615,10 @@ nav #ham-items {
 }
 #portfolio .portfolio-outside-links a svg:hover {
   fill: white;
+}
+
+.other-projects-container {
+  margin-top: 2rem;
 }
 
 #portfolio .other-projects-container-title {
