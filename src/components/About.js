@@ -73,8 +73,8 @@ const About = (props) => {
                 </div>
             </div>
             <div id="head-shot" >
-                <div className="img-overlay">
-                </div>
+                {/* <div className="img-overlay">
+                </div> */}
             </div>
         </div>
     )
