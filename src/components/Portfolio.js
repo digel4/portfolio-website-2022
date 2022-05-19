@@ -33,7 +33,7 @@ const Portfolio = (props) => {
              <div className="project-info">
                  <h2>Real Creative Futures Website</h2>
                  <p>
-                     Real Creative Futures SPA which could display all the events being run by Real Creative Futures. The events are stored using MongoDB. Event CRUD functionality. Uses a cookie-based authentication with JSON web to enable silent refreshes. Login details are on the login page so you can experiment with the flow.
+                     Real Creative Futures SPA which could display all the events being run by Real Creative Futures. The events are stored using MongoDB. Event CRUD functionality. Uses a cookie-based authentication with JSON web tokens to enable silent refreshes. Login details are on the login page so you can experiment with the flow.
                  </p>
                  <ul>
                      <li>React</li>

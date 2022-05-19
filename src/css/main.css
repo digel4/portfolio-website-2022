@@ -512,7 +512,7 @@ nav #ham-items {
   flex-wrap: wrap;
 }
 #about li {
-  width: 15rem;
+  width: 10rem;
   text-align: center;
   color: 1rem;
 }
@@ -895,7 +895,7 @@ form .button {
     flex-wrap: wrap;
   }
   #about li {
-    width: 15rem;
+    width: 10rem;
     text-align: center;
     color: 1rem;
   }
