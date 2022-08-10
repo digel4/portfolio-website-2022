@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { debounce } from '../utilities/helpers';
-import myResume from "../assets/Oliver-Fox-CV.pdf";
+import myResume from "../assets/Oliver-Fox-CV-online.pdf";
 const Header = (props) => {
     const { scrollFunction, swapBurgerMenuIcon } = props;
 
