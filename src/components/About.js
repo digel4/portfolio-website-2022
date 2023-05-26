@@ -69,6 +69,22 @@ const About = (props) => {
                             <img src="assets/Git.png" alt="Git logo"/>
                             <h4>Git</h4>
                         </li>
+                        <li>
+                            <img src="assets/TS.png" alt="GiTS logo"/>
+                            <h4>TypeScript</h4>
+                        </li>
+                        <li>
+                            <img src="assets/sql.png" alt="sql logo"/>
+                            <h4>SQL</h4>
+                        </li>
+                        <li>
+                            <img src="assets/dotnet.png" alt=".net logo"/>
+                            <h4>.Net</h4>
+                        </li>
+                        <li>
+                            <img src="assets/c-sharp.png" alt="c# logo"/>
+                            <h4>C#</h4>
+                        </li>
                     </ul>
                 </div>
             </div>

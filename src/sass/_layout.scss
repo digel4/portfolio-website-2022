@@ -57,15 +57,54 @@
         grid-row: 1/ span 1;
     }
 
-    .portfolio-website-img-container {
+    .portfolio-website-img-container-one {
         grid-column: 1/ span 1;
-        grid-row: 2/ span 2;
+        grid-row: 1/ span 1;
+    }
+    .portfolio-website-img-container-two {
+        grid-column: 1/ span 1;
+        grid-row: 2/ span 1;
     }
 
-    .project-info {
+    .project-info-one {
         grid-column: 2/ span 1;
-        grid-row: 3/ span 1;
+        grid-row: 1/ span 1;
     }
+    .project-info-two {
+        grid-column: 2/ span 1;
+        grid-row: 2/ span 1;
+    }
+
+    // #portfolio {
+    //     grid-column: 2/ span 1;
+    //     grid-row: 5 / span 1;
+    
+    //     display: grid;
+    //     grid-template-columns: 1fr 1fr;
+    //     //grid-template-rows: 20% 10% auto;
+    //     h1 {
+    //         grid-column: 1/ span 2;
+    //         grid-row: 1/ span 1;
+    //     }
+    
+    //     .portfolio-website-img-container-one {
+    //         grid-column: 1/ span 1;
+    //         grid-row: 2/ span 2;
+    //     }
+    //     .portfolio-website-img-container-two {
+    //         grid-column: 1/ span 1;
+    //         grid-row: 2/ span 2;
+    //     }
+    
+    //     .project-info-one {
+    //         grid-column: 2/ span 1;
+    //         grid-row: 1/ span 1;
+    //     }
+    //     .project-info-two {
+    //         grid-column: 2/ span 1;
+    //         grid-row: 4/ span 1;
+    //     }
+
 
  
 
@@ -224,10 +263,33 @@ form {
         //grid-template-rows: 10vh 90vh 100vh 100vh 100vh 80vh 10vh 10vh;
     }
     #portfolio {
-        grid-column: 2/ span 1;
+        grid-column: 1/ span 2;
         grid-row: 5 / span 1;
-        display: flex;
+        // display: grid;
         flex-direction: column;
+
+        h1 {
+            grid-column: 1/ span 2;
+            grid-row: 1/ span 1;
+        }
+
+        .portfolio-website-img-container-one {
+            grid-column: 1/ span 2;
+            grid-row: 2/ span 1;
+        }
+        .portfolio-website-img-container-two {
+            grid-column: 1/ span 2;
+            grid-row: 4/ span 1;
+        }
+    
+        .project-info-one {
+            grid-column: 1/ span 2;
+            grid-row: 3/ span 1;
+        }
+        .project-info-two {
+            grid-column: 1/ span 2;
+            grid-row: 5/ span 1;
+        }
     
         //height: 100vh;
     }

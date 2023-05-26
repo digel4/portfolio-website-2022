@@ -595,6 +595,9 @@ nav #ham-items {
 #portfolio .project-info p {
   padding-left: 1.5rem;
 }
+#portfolio .portfolio-website-img-container-one {
+  margin-bottom: 2rem;
+}
 #portfolio .featured-project {
   color: #eb175d;
 }
@@ -1133,13 +1136,21 @@ form .button {
   grid-column: 1/span 2;
   grid-row: 1/span 1;
 }
-#portfolio .portfolio-website-img-container {
+#portfolio .portfolio-website-img-container-one {
   grid-column: 1/span 1;
-  grid-row: 2/span 2;
+  grid-row: 1/span 1;
 }
-#portfolio .project-info {
+#portfolio .portfolio-website-img-container-two {
+  grid-column: 1/span 1;
+  grid-row: 2/span 1;
+}
+#portfolio .project-info-one {
   grid-column: 2/span 1;
-  grid-row: 3/span 1;
+  grid-row: 1/span 1;
+}
+#portfolio .project-info-two {
+  grid-column: 2/span 1;
+  grid-row: 2/span 1;
 }
 #portfolio div ul {
   display: flex;
@@ -1245,10 +1256,29 @@ form #submit {
   }
 
   #portfolio {
-    grid-column: 2/span 1;
+    grid-column: 1/span 2;
     grid-row: 5/span 1;
-    display: flex;
     flex-direction: column;
+  }
+  #portfolio h1 {
+    grid-column: 1/span 2;
+    grid-row: 1/span 1;
+  }
+  #portfolio .portfolio-website-img-container-one {
+    grid-column: 1/span 2;
+    grid-row: 2/span 1;
+  }
+  #portfolio .portfolio-website-img-container-two {
+    grid-column: 1/span 2;
+    grid-row: 4/span 1;
+  }
+  #portfolio .project-info-one {
+    grid-column: 1/span 2;
+    grid-row: 3/span 1;
+  }
+  #portfolio .project-info-two {
+    grid-column: 1/span 2;
+    grid-row: 5/span 1;
   }
 
   #about {
